@@ -31,7 +31,7 @@ const PriceModal = ({ product, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
+    <div className="fixed inset-0 z-120 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
       <div className="bg-white w-full max-w-lg rounded-[2.5rem] p-10 shadow-2xl relative overflow-hidden">
         
         {sent ? (
@@ -72,7 +72,7 @@ const PriceModal = ({ product, onClose }) => {
                 onChange={e => setFormData({...formData, email: e.target.value})}
               />
               <textarea 
-                className="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 min-h-[100px]"
+                className="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 min-h-25"
                 value={formData.message}
                 onChange={e => setFormData({...formData, message: e.target.value})}
               ></textarea>

@@ -22,7 +22,7 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
+    <div className="fixed inset-0 z-120 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
       <div className="bg-white w-full max-w-xl rounded-[2.5rem] p-10 shadow-2xl relative">
         <button onClick={onClose} className="absolute right-8 top-8 text-slate-400 hover:text-red-500 transition-colors"><X size={24} /></button>
         
@@ -49,7 +49,7 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
 
           <textarea 
             value={formData.composition}
-            className="w-full p-4 bg-slate-50 border rounded-2xl min-h-[100px]"
+            className="w-full p-4 bg-slate-50 border rounded-2xl min-h-25"
             onChange={e => setFormData({...formData, composition: e.target.value})}
             placeholder="Salt Composition"
           />
