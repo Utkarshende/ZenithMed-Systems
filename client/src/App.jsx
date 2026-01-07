@@ -11,7 +11,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 const [pages, setPages] = useState(1);
-
+  
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
@@ -24,7 +25,7 @@ const [pages, setPages] = useState(1);
 const fetchData = async () => {
   setLoading(true);
   const categoryParam = activeCategory !== 'All' ? `&category=${activeCategory}` : '';
-  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
+  const { data } = await axios.get(`${API_URL}/api/products`);
   setProducts(data.products);
   setPages(data.pages);
   setLoading(false);

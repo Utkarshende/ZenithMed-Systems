@@ -6,6 +6,7 @@ const connectDB = require('./config/db'); // Import the DB function
 const productRoutes = require('./routes/productRoutes');
 const inquiryRoutes = require('./routes/inquiryRoutes');
 
+
 dotenv.config();
 
 // Connect to Database
