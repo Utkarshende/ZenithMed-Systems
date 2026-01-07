@@ -24,9 +24,7 @@ const [pages, setPages] = useState(1);
 const fetchData = async () => {
   setLoading(true);
   const categoryParam = activeCategory !== 'All' ? `&category=${activeCategory}` : '';
-  const { data } = await axios.get(
-    `http://localhost:5000/api/products?pageNumber=${page}&search=${searchTerm}${categoryParam}`
-  );
+  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
   setProducts(data.products);
   setPages(data.pages);
   setLoading(false);
