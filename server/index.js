@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const colors = require('colors');
 const connectDB = require('./config/db'); // Import the DB function
+const productRoutes = require('./routes/productRoutes');
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use('/api/products', productRoutes);
 
 app.get('/', (req, res) => {
     res.send('NexusPharma API is running smoothly...');
