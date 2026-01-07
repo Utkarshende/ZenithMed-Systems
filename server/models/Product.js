@@ -1,46 +1,35 @@
 const mongoose = require('mongoose');
 
-const productSchema = new mongoose.Schema({
-    name: { 
-        type: String, 
-        required: [true, 'Please add a medicine name'],
-        trim: true,
-        index: true // Fast search by name
+const productSchema = mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, 'Please add a medicine name'],
+      trim: true
     },
-    composition: { 
-        type: String, 
-        required: true 
+    category: {
+      type: String,
+      required: [true, 'Please add a category'],
+      enum: ['Oncology', 'Cardiology', 'Antibiotics', 'Nephrology', 'General', 'Gastroenterology']
     },
-    dosageForm: { 
-        type: String, 
-        required: true,
-        enum: ['Tablet', 'Capsule', 'Injection', 'Syrup', 'Gel', 'Cream', 'Other']
+    composition: {
+      type: String,
+      required: [true, 'Please add the salt composition']
     },
-    packaging: { 
-        type: String, 
-        required: true 
+    packaging: {
+      type: String,
+      required: [true, 'Please add packaging details']
     },
-    category: { 
-        type: String, 
-        required: true,
-        index: true // Fast filtering by category
-    },
-    description: { 
-        type: String 
-    },
-    image: { 
-        type: String, 
-        default: 'no-photo.jpg' 
-    },
-    isVerified: {
-        type: Boolean,
-        default: true
+    image: {
+      type: String,
+      default: 'https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?q=80&w=600'
     }
-}, {
-    timestamps: true // Automatically adds createdAt and updatedAt
-});
+  },
+  {
+    timestamps: true,
+  }
+);
 
-// Add a Text Index for global search (Name + Composition)
-productSchema.index({ name: 'text', composition: 'text' });
+const Product = mongoose.model('Product', productSchema);
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = Product;
