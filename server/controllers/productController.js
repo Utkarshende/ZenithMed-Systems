@@ -5,23 +5,28 @@ const Product = require('../models/Product');
 // @access  Public
 const getProducts = async (req, res) => {
     try {
+        const pageSize = 8; // Products per page
+        const page = Number(req.query.pageNumber) || 1;
+
         const { search, category } = req.query;
         let query = {};
 
-        // If user searches for a specific name or salt/composition
         if (search) {
             query.$text = { $search: search };
         }
-
-        // If user filters by category (e.g., Oncology)
-        if (category) {
+        if (category && category !== 'All') {
             query.category = category;
         }
 
-        const products = await Product.find(query).sort({ createdAt: -1 });
-        res.json(products);
+        const count = await Product.countDocuments(query); // Total matching products
+        const products = await Product.find(query)
+            .limit(pageSize)
+            .skip(pageSize * (page - 1)) // Skip products from previous pages
+            .sort({ createdAt: -1 });
+
+        res.json({ products, page, pages: Math.ceil(count / pageSize) });
     } catch (error) {
-        res.status(500).json({ message: "Server Error: Could not fetch products" });
+        res.status(500).json({ message: "Server Error" });
     }
 };
 

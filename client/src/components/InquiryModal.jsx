@@ -22,7 +22,7 @@ const InquiryModal = ({ isOpen, onClose, productName }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
+    <div className="fixed inset-0 z-[100px] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
       <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white w-full max-w-md rounded-3xl p-8 shadow-2xl relative">
         {status === 'success' ? (
           <div className="text-center py-10 space-y-4">

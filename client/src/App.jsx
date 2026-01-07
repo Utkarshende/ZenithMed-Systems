@@ -9,6 +9,9 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+const [pages, setPages] = useState(1);
+
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
@@ -18,18 +21,16 @@ function App() {
     return () => clearTimeout(delayDebounceFn);
   }, [searchTerm, activeCategory]);
 
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const categoryParam = activeCategory !== 'All' ? `&category=${activeCategory}` : '';
-      const { data } = await axios.get(`http://localhost:5000/api/products?search=${searchTerm}${categoryParam}`);
-      setProducts(data);
-    } catch (err) {
-      console.error("Fetch error:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+const fetchData = async () => {
+  setLoading(true);
+  const categoryParam = activeCategory !== 'All' ? `&category=${activeCategory}` : '';
+  const { data } = await axios.get(
+    `http://localhost:5000/api/products?pageNumber=${page}&search=${searchTerm}${categoryParam}`
+  );
+  setProducts(data.products);
+  setPages(data.pages);
+  setLoading(false);
+};
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans">
@@ -38,6 +39,27 @@ function App() {
           Nexus<span className="text-blue-500">Pharma</span>
         </h1>
       </nav>
+      <div className="flex justify-center items-center gap-4 mt-12 pb-10">
+  <button 
+    disabled={page === 1}
+    onClick={() => setPage(page - 1)}
+    className="px-6 py-2 bg-white border border-slate-200 rounded-xl disabled:opacity-30 hover:bg-slate-50 transition-all font-bold"
+  >
+    Previous
+  </button>
+  
+  <span className="text-slate-500 font-medium">
+    Page <span className="text-blue-600">{page}</span> of {pages}
+  </span>
+
+  <button 
+    disabled={page === pages}
+    onClick={() => setPage(page + 1)}
+    className="px-6 py-2 bg-white border border-slate-200 rounded-xl disabled:opacity-30 hover:bg-slate-50 transition-all font-bold"
+  >
+    Next
+  </button>
+</div>
 
       <main className="max-w-7xl mx-auto px-6 py-10">
         <SearchBar 
