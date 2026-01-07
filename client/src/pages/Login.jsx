@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center p-6">
-      <div className="w-full max-w-md bg-white rounded-[2rem] shadow-2xl shadow-blue-100 overflow-hidden border border-slate-100">
+      <div className="w-full max-w-md bg-white rounded-4xl shadow-2xl shadow-blue-100 overflow-hidden border border-slate-100">
         
         {/* Top Branding Section */}
         <div className="bg-slate-900 p-8 text-center text-white">
