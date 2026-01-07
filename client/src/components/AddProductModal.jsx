@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, PlusCircle, Loader2, ClipboardList, Database } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { X, Save, Database, Image as ImageIcon, Pill } from 'lucide-react';
 
 const AddProductModal = ({ onClose, onProductAdded }) => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    category: 'Oncology', // Default selection
+    category: 'Oncology', // Default category
     composition: '',
     packaging: '',
-    dosageForm: 'Tablet'
+    image: ''
   });
 
   const handleSubmit = async (e) => {
@@ -20,22 +20,23 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
       const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
       await axios.post(`${API_URL}/api/products`, formData);
       onProductAdded(); 
-      onClose(); 
+      onClose();
     } catch (err) {
-      console.error("Error adding product:", err);
-      alert("Failed to add product. Ensure backend is running.");
+      console.error("Save failed:", err);
+      alert("Error saving medicine. Ensure your server is running.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="fixed inset-0 z-110 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white w-full max-w-xl rounded-[2.5rem] p-10 shadow-2xl relative"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="bg-white w-full max-w-xl rounded-[2.5rem] p-10 shadow-2xl relative overflow-hidden"
       >
+        {/* --- Header --- */}
         <button onClick={onClose} className="absolute right-8 top-8 text-slate-400 hover:text-red-500 transition-colors">
           <X size={24} />
         </button>
@@ -45,27 +46,30 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
             <Database size={24} />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-slate-900">New Inventory Entry</h2>
-            <p className="text-slate-400 text-sm font-medium">Add a medicine to the public catalog.</p>
+            <h2 className="text-2xl font-black text-slate-900">Add Formulation</h2>
+            <p className="text-slate-400 text-sm font-medium italic">Update the global catalog</p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-2 gap-5">
-            <div className="col-span-2">
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Medicine Name</label>
-              <input 
-                required 
-                placeholder="e.g. Nexium 40mg"
-                className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all"
-                onChange={e => setFormData({...formData, name: e.target.value})} 
-              />
-            </div>
-            
+        {/* --- Form --- */}
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Medicine Name */}
+          <div>
+            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Product Name</label>
+            <input 
+              required 
+              placeholder="e.g. Nexium 40mg" 
+              className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+              onChange={e => setFormData({...formData, name: e.target.value})} 
+            />
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4">
+            {/* Category Dropdown */}
             <div>
               <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Category</label>
               <select 
-                className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 font-bold text-slate-700"
                 value={formData.category}
                 onChange={e => setFormData({...formData, category: e.target.value})}
               >
@@ -77,32 +81,50 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
               </select>
             </div>
 
+            {/* Packaging */}
             <div>
               <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Packaging</label>
               <input 
-                placeholder="10x10 Tablets" 
+                placeholder="e.g. 10x10 Tablets" 
                 className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500"
                 onChange={e => setFormData({...formData, packaging: e.target.value})} 
               />
             </div>
           </div>
 
+          {/* Image URL Field */}
+          <div>
+            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Image Link (Unsplash/Web)</label>
+            <div className="relative mt-1.5">
+               <ImageIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+               <input 
+                 placeholder="Paste product image URL..." 
+                 className="w-full p-4 pl-12 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500"
+                 onChange={e => setFormData({...formData, image: e.target.value})} 
+               />
+            </div>
+          </div>
+
+          {/* Salt Composition */}
           <div>
             <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Salt Composition</label>
             <textarea 
               required 
-              placeholder="e.g. Esomeprazole Magnesium"
-              className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 min-h-25"
+              placeholder="e.g. Esomeprazole Magnesium" 
+              className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 min-h-[100px] leading-relaxed"
               onChange={e => setFormData({...formData, composition: e.target.value})}
             ></textarea>
           </div>
 
+          {/* Submit Button */}
           <button 
             type="submit" 
             disabled={loading}
-            className="w-full bg-slate-900 text-white py-5 rounded-3xl font-bold flex items-center justify-center gap-3 hover:bg-black transition-all shadow-xl shadow-slate-200"
+            className="w-full bg-slate-900 text-white py-5 rounded-[1.5rem] font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition-all shadow-xl shadow-slate-200 disabled:opacity-50"
           >
-            {loading ? <Loader2 className="animate-spin" /> : <>Save to Inventory <ClipboardList size={20}/></>}
+             {loading ? 'Processing...' : (
+               <>Publish Formulation <Save size={20}/></>
+             )}
           </button>
         </form>
       </motion.div>
@@ -110,4 +132,4 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
   );
 };
 
-export default AddProductModal; 
+export default AddProductModal;
