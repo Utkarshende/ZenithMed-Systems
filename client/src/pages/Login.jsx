@@ -15,7 +15,7 @@ const Login = () => {
     // PROFESSIONAL NOTE: In a real app, you would send this to your 
     // Backend API. For now, we use a secure hardcoded check.
     setTimeout(() => {
-      if (email === 'admin@nexuspharma.com' && password === 'a') {
+      if (email === 'admin@nexuspharma.com' && password === 'Nexus@2026') {
         localStorage.setItem('isAdmin', 'true');
         navigate('/admin');
       } else {

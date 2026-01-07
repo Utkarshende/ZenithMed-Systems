@@ -130,7 +130,7 @@ const App = () => {
               {/* --- Grid View --- */}
               {loading ? (
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                  {[1,2,3,4].map(i => <div key={i} className="h-80 bg-slate-200 rounded-[2rem] animate-pulse" />)}
+                  {[1,2,3,4].map(i => <div key={i} className="h-80 bg-slate-200 rounded-4xl animate-pulse" />)}
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">

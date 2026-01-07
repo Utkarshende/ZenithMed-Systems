@@ -30,7 +30,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-110 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
             <textarea 
               required 
               placeholder="e.g. Esomeprazole Magnesium"
-              className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 min-h-[100px]"
+              className="w-full mt-1.5 p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 min-h-25"
               onChange={e => setFormData({...formData, composition: e.target.value})}
             ></textarea>
           </div>
@@ -100,7 +100,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
           <button 
             type="submit" 
             disabled={loading}
-            className="w-full bg-slate-900 text-white py-5 rounded-[1.5rem] font-bold flex items-center justify-center gap-3 hover:bg-black transition-all shadow-xl shadow-slate-200"
+            className="w-full bg-slate-900 text-white py-5 rounded-3xl font-bold flex items-center justify-center gap-3 hover:bg-black transition-all shadow-xl shadow-slate-200"
           >
             {loading ? <Loader2 className="animate-spin" /> : <>Save to Inventory <ClipboardList size={20}/></>}
           </button>
