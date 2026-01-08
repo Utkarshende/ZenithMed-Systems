@@ -1,49 +1,27 @@
-import { useState } from 'react';
-import { Pill, ArrowUpRight } from 'lucide-react';
-import PriceModal from './PriceModal'; // Import the new modal
+import { Plus } from "lucide-react";
 
 const ProductCard = ({ product }) => {
-  const [showModal, setShowModal] = useState(false);
-
   return (
-    <>
-      <div className="bg-white rounded-[2rem] p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
-        <div>
-          <div className="flex justify-between items-start mb-4">
-            <div className="bg-blue-50 text-blue-600 p-3 rounded-2xl">
-              <Pill size={24} />
-            </div>
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full">
-              {product.category}
-            </span>
-          </div>
-          
-          <h3 className="text-xl font-black text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">
-            {product.name}
-          </h3>
-          <p className="text-slate-400 text-xs font-bold uppercase tracking-tighter mb-4">
-            {product.packaging || 'Standard Pack'}
-          </p>
-          
-          <div className="bg-slate-50 p-4 rounded-2xl mb-6">
-            <p className="text-[10px] font-black text-slate-400 uppercase mb-1">Composition</p>
-            <p className="text-sm font-bold text-slate-600 line-clamp-2 leading-relaxed">
-              {product.composition}
-            </p>
-          </div>
-        </div>
-
-        <button 
-          onClick={() => setShowModal(true)} // Open modal on click
-          className="w-full bg-slate-900 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition-all shadow-lg"
-        >
-          Get Best Price <ArrowUpRight size={18} />
-        </button>
+    <div className="bg-white rounded-2xl p-4 shadow hover:shadow-xl transition flex flex-col">
+      <div className="h-32 bg-slate-100 rounded-xl mb-4 flex items-center justify-center">
+        <img src={product.image} alt="" className="h-24 object-contain" />
       </div>
 
-      {/* Render Modal conditionally */}
-      {showModal && <PriceModal product={product} onClose={() => setShowModal(false)} />}
-    </>
+      <h4 className="font-bold text-sm mb-1 line-clamp-2">
+        {product.name}
+      </h4>
+
+      <p className="text-xs text-slate-400 mb-3">
+        {product.composition}
+      </p>
+
+      <div className="mt-auto flex justify-between items-center">
+        <span className="font-black text-lg">₹{product.price || 299}</span>
+        <button className="bg-[#10847e] text-white p-2 rounded-xl">
+          <Plus size={16} />
+        </button>
+      </div>
+    </div>
   );
 };
 

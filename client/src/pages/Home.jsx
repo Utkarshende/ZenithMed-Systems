@@ -1,50 +1,45 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
+import CategoryBar from "../components/CategoryBar";
+import ProductCard from "../components/ProductCard";
 
-const Home = ({ onAddToCart, searchQuery }) => {
-  const [medicines, setMedicines] = useState([]);
-  const [loading, setLoading] = useState(false);
+const API_URL = "http://localhost:5000";
+
+const Home = () => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchMedicines = async () => {
-      setLoading(true);
-      try {
-        // Calling your backend API
-        const response = await fetch(`http://localhost:5000/api/medicines?query=${searchQuery}`);
-        const data = await response.json();
-        setMedicines(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    // Debounce: Wait 300ms after user stops typing to call API
-    const timeoutId = setTimeout(fetchMedicines, 300);
-    return () => clearTimeout(timeoutId);
-  }, [searchQuery]);
+    fetch(`${API_URL}/api/products`)
+      .then(res => res.json())
+      .then(data => setProducts(data.products || []));
+  }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* ... Hero sections ... */}
+    <main className="max-w-7xl mx-auto px-6 py-8">
       
-      {loading ? (
-        <div className="text-center py-20 font-bold text-[#10847e]">Searching database...</div>
-      ) : (
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {medicines.map((med) => (
-             <div key={med._id} className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-                {/* Product Card Content */}
-                <h4 className="text-xs font-bold mb-4">{med.name}</h4>
-                <div className="flex justify-between items-center">
-                   <span className="font-black">₹{med.price}</span>
-                   <button onClick={() => onAddToCart(med)} className="text-[10px] font-black text-[#10847e] border border-[#10847e] px-3 py-1 rounded">ADD</button>
-                </div>
-             </div>
-          ))}
-        </div>
-      )}
-    </div>
+      {/* HERO */}
+      <div className="bg-gradient-to-r from-[#10847e] to-[#0d6b66] text-white rounded-3xl p-10 mb-10">
+        <h2 className="text-4xl font-black mb-4">
+          India’s Most Trusted Online Pharmacy
+        </h2>
+        <p className="opacity-90">
+          Genuine medicines • Fast delivery • Best prices
+        </p>
+      </div>
+
+      <CategoryBar />
+
+      {/* PRODUCTS */}
+      <h3 className="text-xl font-black mb-6 text-slate-800">
+        Popular Medicines
+      </h3>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+        {products.map(p => (
+          <ProductCard key={p._id} product={p} />
+        ))}
+      </div>
+    </main>
   );
 };
+
 export default Home;
