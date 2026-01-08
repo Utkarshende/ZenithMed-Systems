@@ -10,6 +10,7 @@ import {
 import AdminDashboard from './pages/AdminDashboard';
 import Login from './pages/Login';
 import PriceModal from './components/PriceModal';
+import Contact from './pages/Contact'; // 1. Import at the top
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -174,6 +175,7 @@ const App = () => {
 
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={isAdmin ? <AdminDashboard /> : <Navigate to="/login" />} />
+        <Route path="/contact" element={<Contact />} />
         </Routes>
 
         {/* --- PROFESSIONAL FOOTER --- */}
@@ -217,6 +219,8 @@ const App = () => {
                 <li><a href="#catalog" className="hover:text-blue-500 transition-colors">Medicine Catalog</a></li>
                 <li><button onClick={() => setSelectedProduct({name: 'Bulk Export / Wholesale', composition: 'Multiple Items'})} className="hover:text-blue-500 transition-colors text-left uppercase">Wholesale Inquiry</button></li>
                 <li><Link to="/admin" className="hover:text-blue-500 transition-colors">Admin Dashboard</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo(0,0)} className="hover:text-blue-500 transition-colors">Contact Support</Link>
+              </li>
               </ul>
             </div>
 
