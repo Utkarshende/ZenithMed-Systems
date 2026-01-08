@@ -1,44 +1,50 @@
-const Home = ({ onAddToCart, searchQuery }) => {
-  // Mock data representing a portion of your 10,000 medicines
-  const allMedicines = [
-    { id: 1, name: 'Paracetamol 650mg', price: 30, cat: 'General' },
-    { id: 2, name: 'Voldini Gel', price: 120, cat: 'Pain Relief' },
-    { id: 3, name: 'Amoxicillin 500mg', price: 85, cat: 'Antibiotics' },
-    { id: 4, name: 'Atorvastatin 10mg', price: 150, cat: 'Cardiac' },
-    // Imagine 9,996 more items here...
-  ];
+import { useState, useEffect } from 'react';
 
-  // Filter logic
-  const filteredMeds = allMedicines.filter(med => 
-    med.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+const Home = ({ onAddToCart, searchQuery }) => {
+  const [medicines, setMedicines] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchMedicines = async () => {
+      setLoading(true);
+      try {
+        // Calling your backend API
+        const response = await fetch(`http://localhost:5000/api/medicines?query=${searchQuery}`);
+        const data = await response.json();
+        setMedicines(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Debounce: Wait 300ms after user stops typing to call API
+    const timeoutId = setTimeout(fetchMedicines, 300);
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* ... Hero and Banner ... */}
-
-      <h2 className="text-lg font-black text-slate-800 mb-6">
-        {searchQuery ? `Results for "${searchQuery}"` : "Trending Near You"}
-      </h2>
-
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        {filteredMeds.length > 0 ? (
-          filteredMeds.map((med) => (
-            <div key={med.id} className="bg-white p-4 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
-               <div className="aspect-square bg-slate-50 rounded-lg mb-4 flex items-center justify-center text-[#10847e] font-bold">
-                 {med.cat}
-               </div>
-               <h4 className="text-xs font-bold mb-4">{med.name}</h4>
-               <div className="flex justify-between items-center mt-auto">
-                  <span className="font-black text-slate-800">₹{med.price}</span>
-                  <button onClick={() => onAddToCart(med)} className="text-[10px] font-black text-[#10847e] border border-[#10847e] px-3 py-1 rounded">ADD</button>
-               </div>
-            </div>
-          ))
-        ) : (
-          <p className="col-span-full text-center py-20 text-slate-400 font-medium">No medicines found matching your search.</p>
-        )}
-      </div>
+      {/* ... Hero sections ... */}
+      
+      {loading ? (
+        <div className="text-center py-20 font-bold text-[#10847e]">Searching database...</div>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          {medicines.map((med) => (
+             <div key={med._id} className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                {/* Product Card Content */}
+                <h4 className="text-xs font-bold mb-4">{med.name}</h4>
+                <div className="flex justify-between items-center">
+                   <span className="font-black">₹{med.price}</span>
+                   <button onClick={() => onAddToCart(med)} className="text-[10px] font-black text-[#10847e] border border-[#10847e] px-3 py-1 rounded">ADD</button>
+                </div>
+             </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
+export default Home;

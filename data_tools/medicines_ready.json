@@ -1,0 +1,6002 @@
+[
+    {
+        "name": "Dolo Forte C",
+        "price": 1172,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 1"
+    },
+    {
+        "name": "Dolo 650 Z",
+        "price": 54,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 2"
+    },
+    {
+        "name": "Pan Syrup C",
+        "price": 1874,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 3"
+    },
+    {
+        "name": "Voldin Gel X",
+        "price": 926,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 4"
+    },
+    {
+        "name": "Rosu Forte Z",
+        "price": 1415,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 5"
+    },
+    {
+        "name": "Zitro Gel Z",
+        "price": 1860,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 6"
+    },
+    {
+        "name": "Pan SR X",
+        "price": 1310,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 7"
+    },
+    {
+        "name": "Zitro 500 C",
+        "price": 2451,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 8"
+    },
+    {
+        "name": "Atorva Tablet Z",
+        "price": 224,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 9"
+    },
+    {
+        "name": "Voldin Plus B",
+        "price": 66,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 10"
+    },
+    {
+        "name": "Atorva Syrup X",
+        "price": 494,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 11"
+    },
+    {
+        "name": "Zitro Plus C",
+        "price": 1118,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 12"
+    },
+    {
+        "name": "Nuro Forte A",
+        "price": 1135,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 13"
+    },
+    {
+        "name": "Zitro Forte B",
+        "price": 2195,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 14"
+    },
+    {
+        "name": "Nuro Plus Z",
+        "price": 996,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 15"
+    },
+    {
+        "name": "Zitro Plus X",
+        "price": 2252,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 16"
+    },
+    {
+        "name": "Glycom Plus B",
+        "price": 1704,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 17"
+    },
+    {
+        "name": "Telmi Forte B",
+        "price": 527,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 18"
+    },
+    {
+        "name": "Atorva Capsule X",
+        "price": 1652,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 19"
+    },
+    {
+        "name": "Voldin SR B",
+        "price": 1002,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 20"
+    },
+    {
+        "name": "Dolo SR Z",
+        "price": 1882,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 21"
+    },
+    {
+        "name": "Dolo-D X",
+        "price": 2333,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 22"
+    },
+    {
+        "name": "Pan 650 C",
+        "price": 2313,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 23"
+    },
+    {
+        "name": "Zitro Capsule B",
+        "price": 1259,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 24"
+    },
+    {
+        "name": "Rosu Plus Z",
+        "price": 1134,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 25"
+    },
+    {
+        "name": "Rosu Capsule Z",
+        "price": 1013,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 26"
+    },
+    {
+        "name": "Telmi SR C",
+        "price": 2185,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 27"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 1441,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 28"
+    },
+    {
+        "name": "Atorva Syrup A",
+        "price": 172,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 29"
+    },
+    {
+        "name": "Pan Forte B",
+        "price": 2480,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 30"
+    },
+    {
+        "name": "Rosu SR C",
+        "price": 1062,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 31"
+    },
+    {
+        "name": "Nuro Plus B",
+        "price": 1779,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 32"
+    },
+    {
+        "name": "Voldin Capsule C",
+        "price": 1547,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 33"
+    },
+    {
+        "name": "Dolo Syrup C",
+        "price": 2412,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 34"
+    },
+    {
+        "name": "Dolo Plus Z",
+        "price": 680,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 35"
+    },
+    {
+        "name": "Dolo Syrup Z",
+        "price": 996,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 36"
+    },
+    {
+        "name": "Mont Capsule Z",
+        "price": 2207,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 37"
+    },
+    {
+        "name": "Dolo-D Z",
+        "price": 432,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 38"
+    },
+    {
+        "name": "Nuro Plus B",
+        "price": 1526,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 39"
+    },
+    {
+        "name": "Voldin Tablet C",
+        "price": 171,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 40"
+    },
+    {
+        "name": "Atorva Tablet C",
+        "price": 2146,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 41"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 1617,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 42"
+    },
+    {
+        "name": "Rosu Forte C",
+        "price": 1474,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 43"
+    },
+    {
+        "name": "Telmi Syrup A",
+        "price": 1908,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 44"
+    },
+    {
+        "name": "Zitro Capsule B",
+        "price": 157,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 45"
+    },
+    {
+        "name": "Telmi SR Z",
+        "price": 980,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 46"
+    },
+    {
+        "name": "Zitro 500 X",
+        "price": 1942,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 47"
+    },
+    {
+        "name": "Nuro 500 Z",
+        "price": 1328,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 48"
+    },
+    {
+        "name": "Voldin Plus C",
+        "price": 1657,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 49"
+    },
+    {
+        "name": "Telmi Forte A",
+        "price": 1372,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 50"
+    },
+    {
+        "name": "Pan Tablet Z",
+        "price": 1499,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 51"
+    },
+    {
+        "name": "Pan Gel X",
+        "price": 2334,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 52"
+    },
+    {
+        "name": "Nuro 650 Z",
+        "price": 1965,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 53"
+    },
+    {
+        "name": "Rosu Tablet Z",
+        "price": 1694,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 54"
+    },
+    {
+        "name": "Mont SR Z",
+        "price": 304,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 55"
+    },
+    {
+        "name": "Mont-D Z",
+        "price": 373,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 56"
+    },
+    {
+        "name": "Mont Capsule X",
+        "price": 1023,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 57"
+    },
+    {
+        "name": "Dolo Plus X",
+        "price": 2338,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 58"
+    },
+    {
+        "name": "Atorva-D A",
+        "price": 2120,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 59"
+    },
+    {
+        "name": "Rosu Syrup C",
+        "price": 642,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 60"
+    },
+    {
+        "name": "Glycom Syrup Z",
+        "price": 2447,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 61"
+    },
+    {
+        "name": "Zitro 500 C",
+        "price": 2203,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 62"
+    },
+    {
+        "name": "Mont Plus X",
+        "price": 111,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 63"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 987,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 64"
+    },
+    {
+        "name": "Nuro 500 B",
+        "price": 1723,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 65"
+    },
+    {
+        "name": "Voldin 650 Z",
+        "price": 1096,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 66"
+    },
+    {
+        "name": "Glycom-D Z",
+        "price": 430,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 67"
+    },
+    {
+        "name": "Atorva-D B",
+        "price": 73,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 68"
+    },
+    {
+        "name": "Dolo Tablet A",
+        "price": 1768,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 69"
+    },
+    {
+        "name": "Zitro Syrup A",
+        "price": 623,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 70"
+    },
+    {
+        "name": "Dolo Tablet B",
+        "price": 1928,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 71"
+    },
+    {
+        "name": "Dolo-D B",
+        "price": 262,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 72"
+    },
+    {
+        "name": "Zitro-D X",
+        "price": 508,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 73"
+    },
+    {
+        "name": "Telmi Capsule Z",
+        "price": 867,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 74"
+    },
+    {
+        "name": "Dolo Syrup Z",
+        "price": 1767,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 75"
+    },
+    {
+        "name": "Dolo 500 A",
+        "price": 223,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 76"
+    },
+    {
+        "name": "Zitro Syrup A",
+        "price": 388,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 77"
+    },
+    {
+        "name": "Mont Syrup B",
+        "price": 895,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 78"
+    },
+    {
+        "name": "Mont Plus B",
+        "price": 1142,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 79"
+    },
+    {
+        "name": "Rosu-D A",
+        "price": 762,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 80"
+    },
+    {
+        "name": "Nuro Forte C",
+        "price": 2396,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 81"
+    },
+    {
+        "name": "Rosu-D X",
+        "price": 1844,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 82"
+    },
+    {
+        "name": "Telmi-D Z",
+        "price": 2301,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 83"
+    },
+    {
+        "name": "Voldin-D A",
+        "price": 939,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 84"
+    },
+    {
+        "name": "Mont 500 C",
+        "price": 1295,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 85"
+    },
+    {
+        "name": "Mont-D Z",
+        "price": 688,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 86"
+    },
+    {
+        "name": "Mont Plus Z",
+        "price": 2332,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 87"
+    },
+    {
+        "name": "Rosu Capsule B",
+        "price": 484,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 88"
+    },
+    {
+        "name": "Telmi Syrup Z",
+        "price": 782,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 89"
+    },
+    {
+        "name": "Voldin Plus B",
+        "price": 1918,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 90"
+    },
+    {
+        "name": "Voldin Capsule C",
+        "price": 1188,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 91"
+    },
+    {
+        "name": "Voldin Gel X",
+        "price": 1069,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 92"
+    },
+    {
+        "name": "Zitro Syrup B",
+        "price": 1263,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 93"
+    },
+    {
+        "name": "Rosu 500 B",
+        "price": 1065,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 94"
+    },
+    {
+        "name": "Atorva Tablet B",
+        "price": 2330,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 95"
+    },
+    {
+        "name": "Glycom SR Z",
+        "price": 635,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 96"
+    },
+    {
+        "name": "Pan 500 B",
+        "price": 2243,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 97"
+    },
+    {
+        "name": "Dolo Tablet A",
+        "price": 1258,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 98"
+    },
+    {
+        "name": "Zitro 500 X",
+        "price": 1926,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 99"
+    },
+    {
+        "name": "Zitro 650 Z",
+        "price": 2139,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 100"
+    },
+    {
+        "name": "Rosu Capsule B",
+        "price": 1255,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 101"
+    },
+    {
+        "name": "Glycom Capsule Z",
+        "price": 1891,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 102"
+    },
+    {
+        "name": "Atorva Syrup C",
+        "price": 170,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 103"
+    },
+    {
+        "name": "Pan-D A",
+        "price": 2269,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 104"
+    },
+    {
+        "name": "Atorva Forte C",
+        "price": 859,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 105"
+    },
+    {
+        "name": "Mont-D B",
+        "price": 873,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 106"
+    },
+    {
+        "name": "Mont Capsule C",
+        "price": 1135,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 107"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 184,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 108"
+    },
+    {
+        "name": "Atorva Syrup X",
+        "price": 1501,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 109"
+    },
+    {
+        "name": "Nuro Plus Z",
+        "price": 1275,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 110"
+    },
+    {
+        "name": "Telmi Tablet B",
+        "price": 811,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 111"
+    },
+    {
+        "name": "Zitro-D A",
+        "price": 328,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 112"
+    },
+    {
+        "name": "Dolo Syrup A",
+        "price": 2304,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 113"
+    },
+    {
+        "name": "Telmi 650 A",
+        "price": 304,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 114"
+    },
+    {
+        "name": "Atorva 500 C",
+        "price": 794,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 115"
+    },
+    {
+        "name": "Zitro Syrup X",
+        "price": 2022,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 116"
+    },
+    {
+        "name": "Mont Plus B",
+        "price": 343,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 117"
+    },
+    {
+        "name": "Dolo Forte X",
+        "price": 2221,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 118"
+    },
+    {
+        "name": "Telmi Gel X",
+        "price": 461,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 119"
+    },
+    {
+        "name": "Pan 500 A",
+        "price": 534,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 120"
+    },
+    {
+        "name": "Rosu 650 X",
+        "price": 2170,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 121"
+    },
+    {
+        "name": "Glycom SR C",
+        "price": 791,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 122"
+    },
+    {
+        "name": "Rosu Tablet B",
+        "price": 1806,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 123"
+    },
+    {
+        "name": "Dolo SR C",
+        "price": 2427,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 124"
+    },
+    {
+        "name": "Nuro SR A",
+        "price": 1730,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 125"
+    },
+    {
+        "name": "Nuro SR Z",
+        "price": 734,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 126"
+    },
+    {
+        "name": "Voldin Forte A",
+        "price": 1367,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 127"
+    },
+    {
+        "name": "Dolo-D X",
+        "price": 1721,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 128"
+    },
+    {
+        "name": "Telmi Plus Z",
+        "price": 2065,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 129"
+    },
+    {
+        "name": "Rosu Gel A",
+        "price": 1870,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 130"
+    },
+    {
+        "name": "Voldin SR C",
+        "price": 283,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 131"
+    },
+    {
+        "name": "Voldin Gel X",
+        "price": 138,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 132"
+    },
+    {
+        "name": "Telmi SR Z",
+        "price": 968,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 133"
+    },
+    {
+        "name": "Dolo Gel A",
+        "price": 560,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 134"
+    },
+    {
+        "name": "Rosu Plus C",
+        "price": 2240,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 135"
+    },
+    {
+        "name": "Zitro Plus A",
+        "price": 1683,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 136"
+    },
+    {
+        "name": "Atorva SR A",
+        "price": 2479,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 137"
+    },
+    {
+        "name": "Nuro Capsule Z",
+        "price": 1324,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 138"
+    },
+    {
+        "name": "Telmi SR A",
+        "price": 217,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 139"
+    },
+    {
+        "name": "Voldin Gel B",
+        "price": 1394,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 140"
+    },
+    {
+        "name": "Glycom 500 A",
+        "price": 261,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 141"
+    },
+    {
+        "name": "Atorva 650 C",
+        "price": 164,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 142"
+    },
+    {
+        "name": "Nuro-D B",
+        "price": 2053,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 143"
+    },
+    {
+        "name": "Voldin Forte Z",
+        "price": 1724,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 144"
+    },
+    {
+        "name": "Mont Capsule X",
+        "price": 361,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 145"
+    },
+    {
+        "name": "Telmi Syrup B",
+        "price": 489,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 146"
+    },
+    {
+        "name": "Zitro Gel Z",
+        "price": 2278,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 147"
+    },
+    {
+        "name": "Dolo Plus Z",
+        "price": 1138,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 148"
+    },
+    {
+        "name": "Telmi Syrup A",
+        "price": 1612,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 149"
+    },
+    {
+        "name": "Rosu Forte C",
+        "price": 1765,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 150"
+    },
+    {
+        "name": "Glycom Capsule A",
+        "price": 2192,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 151"
+    },
+    {
+        "name": "Voldin 650 X",
+        "price": 191,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 152"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 2341,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 153"
+    },
+    {
+        "name": "Voldin Tablet C",
+        "price": 487,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 154"
+    },
+    {
+        "name": "Voldin Tablet Z",
+        "price": 126,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 155"
+    },
+    {
+        "name": "Telmi Capsule C",
+        "price": 1353,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 156"
+    },
+    {
+        "name": "Nuro Gel B",
+        "price": 204,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 157"
+    },
+    {
+        "name": "Telmi Gel Z",
+        "price": 1089,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 158"
+    },
+    {
+        "name": "Dolo Tablet X",
+        "price": 1314,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 159"
+    },
+    {
+        "name": "Pan Forte C",
+        "price": 733,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 160"
+    },
+    {
+        "name": "Atorva Plus Z",
+        "price": 338,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 161"
+    },
+    {
+        "name": "Glycom 650 Z",
+        "price": 1867,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 162"
+    },
+    {
+        "name": "Pan Plus B",
+        "price": 917,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 163"
+    },
+    {
+        "name": "Voldin SR B",
+        "price": 1731,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 164"
+    },
+    {
+        "name": "Glycom SR A",
+        "price": 121,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 165"
+    },
+    {
+        "name": "Glycom Capsule B",
+        "price": 693,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 166"
+    },
+    {
+        "name": "Mont Syrup Z",
+        "price": 2015,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 167"
+    },
+    {
+        "name": "Nuro-D X",
+        "price": 1140,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 168"
+    },
+    {
+        "name": "Glycom-D C",
+        "price": 314,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 169"
+    },
+    {
+        "name": "Voldin Capsule B",
+        "price": 943,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 170"
+    },
+    {
+        "name": "Zitro Capsule Z",
+        "price": 476,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 171"
+    },
+    {
+        "name": "Glycom Capsule C",
+        "price": 1643,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 172"
+    },
+    {
+        "name": "Telmi Syrup Z",
+        "price": 259,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 173"
+    },
+    {
+        "name": "Voldin 500 Z",
+        "price": 1911,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 174"
+    },
+    {
+        "name": "Dolo Forte C",
+        "price": 2063,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 175"
+    },
+    {
+        "name": "Dolo Plus B",
+        "price": 289,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 176"
+    },
+    {
+        "name": "Atorva SR A",
+        "price": 2320,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 177"
+    },
+    {
+        "name": "Telmi Plus B",
+        "price": 563,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 178"
+    },
+    {
+        "name": "Telmi 500 A",
+        "price": 971,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 179"
+    },
+    {
+        "name": "Pan Syrup B",
+        "price": 1830,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 180"
+    },
+    {
+        "name": "Zitro Plus A",
+        "price": 2042,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 181"
+    },
+    {
+        "name": "Zitro Gel A",
+        "price": 2193,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 182"
+    },
+    {
+        "name": "Voldin-D Z",
+        "price": 2351,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 183"
+    },
+    {
+        "name": "Atorva Tablet X",
+        "price": 626,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 184"
+    },
+    {
+        "name": "Mont Syrup X",
+        "price": 927,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 185"
+    },
+    {
+        "name": "Dolo Capsule Z",
+        "price": 2184,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 186"
+    },
+    {
+        "name": "Rosu SR Z",
+        "price": 1580,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 187"
+    },
+    {
+        "name": "Mont 500 B",
+        "price": 2343,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 188"
+    },
+    {
+        "name": "Mont-D B",
+        "price": 1951,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 189"
+    },
+    {
+        "name": "Pan 650 Z",
+        "price": 2127,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 190"
+    },
+    {
+        "name": "Zitro SR Z",
+        "price": 613,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 191"
+    },
+    {
+        "name": "Pan 650 Z",
+        "price": 503,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 192"
+    },
+    {
+        "name": "Mont Capsule A",
+        "price": 685,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 193"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 1422,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 194"
+    },
+    {
+        "name": "Mont SR C",
+        "price": 590,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 195"
+    },
+    {
+        "name": "Rosu Gel A",
+        "price": 1078,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 196"
+    },
+    {
+        "name": "Rosu Plus C",
+        "price": 1612,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 197"
+    },
+    {
+        "name": "Zitro 500 A",
+        "price": 1766,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 198"
+    },
+    {
+        "name": "Nuro 500 A",
+        "price": 198,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 199"
+    },
+    {
+        "name": "Atorva Gel X",
+        "price": 1511,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 200"
+    },
+    {
+        "name": "Voldin Syrup B",
+        "price": 818,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 201"
+    },
+    {
+        "name": "Atorva Capsule X",
+        "price": 1393,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 202"
+    },
+    {
+        "name": "Zitro Syrup A",
+        "price": 1144,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 203"
+    },
+    {
+        "name": "Voldin 650 B",
+        "price": 1511,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 204"
+    },
+    {
+        "name": "Zitro 650 X",
+        "price": 579,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 205"
+    },
+    {
+        "name": "Dolo Gel Z",
+        "price": 1887,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 206"
+    },
+    {
+        "name": "Nuro Gel Z",
+        "price": 1302,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 207"
+    },
+    {
+        "name": "Atorva Tablet X",
+        "price": 2376,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 208"
+    },
+    {
+        "name": "Glycom 500 B",
+        "price": 220,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 209"
+    },
+    {
+        "name": "Rosu Forte A",
+        "price": 2341,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 210"
+    },
+    {
+        "name": "Atorva Capsule B",
+        "price": 1929,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 211"
+    },
+    {
+        "name": "Telmi Plus A",
+        "price": 110,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 212"
+    },
+    {
+        "name": "Dolo SR B",
+        "price": 1448,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 213"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 1061,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 214"
+    },
+    {
+        "name": "Voldin Plus C",
+        "price": 203,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 215"
+    },
+    {
+        "name": "Dolo Tablet C",
+        "price": 1145,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 216"
+    },
+    {
+        "name": "Telmi Syrup B",
+        "price": 2370,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 217"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 891,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 218"
+    },
+    {
+        "name": "Mont Tablet C",
+        "price": 1427,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 219"
+    },
+    {
+        "name": "Telmi Forte A",
+        "price": 1903,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 220"
+    },
+    {
+        "name": "Nuro 500 Z",
+        "price": 1981,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 221"
+    },
+    {
+        "name": "Pan Tablet X",
+        "price": 106,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 222"
+    },
+    {
+        "name": "Pan SR A",
+        "price": 454,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 223"
+    },
+    {
+        "name": "Mont SR C",
+        "price": 1451,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 224"
+    },
+    {
+        "name": "Zitro SR Z",
+        "price": 508,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 225"
+    },
+    {
+        "name": "Voldin 650 C",
+        "price": 1713,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 226"
+    },
+    {
+        "name": "Rosu 650 X",
+        "price": 1307,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 227"
+    },
+    {
+        "name": "Telmi Tablet C",
+        "price": 740,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 228"
+    },
+    {
+        "name": "Glycom 500 C",
+        "price": 1590,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 229"
+    },
+    {
+        "name": "Voldin Capsule X",
+        "price": 1776,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 230"
+    },
+    {
+        "name": "Nuro 650 X",
+        "price": 1824,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 231"
+    },
+    {
+        "name": "Pan SR C",
+        "price": 1856,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 232"
+    },
+    {
+        "name": "Nuro 500 A",
+        "price": 2461,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 233"
+    },
+    {
+        "name": "Zitro 500 B",
+        "price": 1518,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 234"
+    },
+    {
+        "name": "Voldin Plus B",
+        "price": 1036,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 235"
+    },
+    {
+        "name": "Zitro Gel X",
+        "price": 2385,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 236"
+    },
+    {
+        "name": "Rosu 650 A",
+        "price": 1035,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 237"
+    },
+    {
+        "name": "Nuro-D B",
+        "price": 439,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 238"
+    },
+    {
+        "name": "Nuro Gel C",
+        "price": 331,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 239"
+    },
+    {
+        "name": "Zitro Capsule X",
+        "price": 1892,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 240"
+    },
+    {
+        "name": "Atorva-D X",
+        "price": 2337,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 241"
+    },
+    {
+        "name": "Voldin 650 X",
+        "price": 995,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 242"
+    },
+    {
+        "name": "Telmi Capsule X",
+        "price": 801,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 243"
+    },
+    {
+        "name": "Telmi-D A",
+        "price": 200,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 244"
+    },
+    {
+        "name": "Dolo Gel A",
+        "price": 628,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 245"
+    },
+    {
+        "name": "Voldin Syrup B",
+        "price": 1313,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 246"
+    },
+    {
+        "name": "Mont Forte B",
+        "price": 2404,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 247"
+    },
+    {
+        "name": "Zitro Gel Z",
+        "price": 1224,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 248"
+    },
+    {
+        "name": "Mont-D A",
+        "price": 235,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 249"
+    },
+    {
+        "name": "Mont Tablet A",
+        "price": 2172,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 250"
+    },
+    {
+        "name": "Zitro-D A",
+        "price": 634,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 251"
+    },
+    {
+        "name": "Zitro 500 C",
+        "price": 2462,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 252"
+    },
+    {
+        "name": "Mont Syrup Z",
+        "price": 182,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 253"
+    },
+    {
+        "name": "Mont SR C",
+        "price": 820,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 254"
+    },
+    {
+        "name": "Rosu Forte Z",
+        "price": 613,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 255"
+    },
+    {
+        "name": "Nuro-D X",
+        "price": 2337,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 256"
+    },
+    {
+        "name": "Rosu Forte A",
+        "price": 279,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 257"
+    },
+    {
+        "name": "Telmi SR C",
+        "price": 652,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 258"
+    },
+    {
+        "name": "Mont Gel B",
+        "price": 603,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 259"
+    },
+    {
+        "name": "Voldin-D B",
+        "price": 1957,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 260"
+    },
+    {
+        "name": "Atorva-D X",
+        "price": 2241,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 261"
+    },
+    {
+        "name": "Dolo Syrup B",
+        "price": 2034,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 262"
+    },
+    {
+        "name": "Dolo Forte X",
+        "price": 580,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 263"
+    },
+    {
+        "name": "Glycom SR Z",
+        "price": 1183,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 264"
+    },
+    {
+        "name": "Pan Tablet Z",
+        "price": 1541,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 265"
+    },
+    {
+        "name": "Nuro Capsule A",
+        "price": 308,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 266"
+    },
+    {
+        "name": "Voldin Syrup X",
+        "price": 1857,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 267"
+    },
+    {
+        "name": "Glycom 650 C",
+        "price": 1379,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 268"
+    },
+    {
+        "name": "Zitro Forte B",
+        "price": 610,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 269"
+    },
+    {
+        "name": "Mont Gel B",
+        "price": 97,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 270"
+    },
+    {
+        "name": "Pan 650 Z",
+        "price": 517,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 271"
+    },
+    {
+        "name": "Telmi 500 C",
+        "price": 1444,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 272"
+    },
+    {
+        "name": "Glycom Syrup X",
+        "price": 2406,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 273"
+    },
+    {
+        "name": "Rosu 650 A",
+        "price": 2050,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 274"
+    },
+    {
+        "name": "Mont Plus X",
+        "price": 520,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 275"
+    },
+    {
+        "name": "Pan Forte A",
+        "price": 2253,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 276"
+    },
+    {
+        "name": "Glycom Forte Z",
+        "price": 722,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 277"
+    },
+    {
+        "name": "Mont Gel C",
+        "price": 2256,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 278"
+    },
+    {
+        "name": "Pan Capsule Z",
+        "price": 2138,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 279"
+    },
+    {
+        "name": "Rosu-D A",
+        "price": 1081,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 280"
+    },
+    {
+        "name": "Telmi 650 B",
+        "price": 384,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 281"
+    },
+    {
+        "name": "Voldin Tablet C",
+        "price": 1360,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 282"
+    },
+    {
+        "name": "Nuro Gel X",
+        "price": 2013,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 283"
+    },
+    {
+        "name": "Telmi Syrup A",
+        "price": 313,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 284"
+    },
+    {
+        "name": "Telmi 650 B",
+        "price": 2408,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 285"
+    },
+    {
+        "name": "Glycom Syrup X",
+        "price": 228,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 286"
+    },
+    {
+        "name": "Rosu 500 Z",
+        "price": 2028,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 287"
+    },
+    {
+        "name": "Zitro Capsule A",
+        "price": 239,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 288"
+    },
+    {
+        "name": "Zitro SR X",
+        "price": 2174,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 289"
+    },
+    {
+        "name": "Mont Forte B",
+        "price": 1701,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 290"
+    },
+    {
+        "name": "Rosu Forte B",
+        "price": 141,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 291"
+    },
+    {
+        "name": "Rosu Syrup Z",
+        "price": 854,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 292"
+    },
+    {
+        "name": "Telmi 650 Z",
+        "price": 1704,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 293"
+    },
+    {
+        "name": "Telmi 650 Z",
+        "price": 492,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 294"
+    },
+    {
+        "name": "Mont Capsule C",
+        "price": 717,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 295"
+    },
+    {
+        "name": "Atorva-D A",
+        "price": 1767,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 296"
+    },
+    {
+        "name": "Dolo Tablet B",
+        "price": 2481,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 297"
+    },
+    {
+        "name": "Atorva Forte Z",
+        "price": 340,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 298"
+    },
+    {
+        "name": "Telmi Forte B",
+        "price": 1498,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 299"
+    },
+    {
+        "name": "Dolo Syrup Z",
+        "price": 1363,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 300"
+    },
+    {
+        "name": "Mont 650 B",
+        "price": 1407,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 301"
+    },
+    {
+        "name": "Zitro-D C",
+        "price": 1767,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 302"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 413,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 303"
+    },
+    {
+        "name": "Atorva SR C",
+        "price": 2038,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 304"
+    },
+    {
+        "name": "Glycom Tablet X",
+        "price": 2214,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 305"
+    },
+    {
+        "name": "Atorva 650 C",
+        "price": 1898,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 306"
+    },
+    {
+        "name": "Nuro Gel X",
+        "price": 1072,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 307"
+    },
+    {
+        "name": "Zitro-D C",
+        "price": 2323,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 308"
+    },
+    {
+        "name": "Nuro Forte C",
+        "price": 2400,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 309"
+    },
+    {
+        "name": "Glycom SR X",
+        "price": 1053,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 310"
+    },
+    {
+        "name": "Rosu Forte B",
+        "price": 457,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 311"
+    },
+    {
+        "name": "Mont-D X",
+        "price": 888,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 312"
+    },
+    {
+        "name": "Telmi-D X",
+        "price": 1348,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 313"
+    },
+    {
+        "name": "Glycom Plus Z",
+        "price": 465,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 314"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 791,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 315"
+    },
+    {
+        "name": "Zitro Capsule A",
+        "price": 761,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 316"
+    },
+    {
+        "name": "Nuro Capsule Z",
+        "price": 1310,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 317"
+    },
+    {
+        "name": "Glycom-D Z",
+        "price": 386,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 318"
+    },
+    {
+        "name": "Atorva Plus X",
+        "price": 2152,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 319"
+    },
+    {
+        "name": "Voldin 650 C",
+        "price": 1726,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 320"
+    },
+    {
+        "name": "Voldin SR A",
+        "price": 2075,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 321"
+    },
+    {
+        "name": "Atorva Gel Z",
+        "price": 653,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 322"
+    },
+    {
+        "name": "Nuro 650 A",
+        "price": 2188,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 323"
+    },
+    {
+        "name": "Voldin Plus Z",
+        "price": 1571,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 324"
+    },
+    {
+        "name": "Rosu Capsule Z",
+        "price": 1570,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 325"
+    },
+    {
+        "name": "Glycom-D X",
+        "price": 99,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 326"
+    },
+    {
+        "name": "Glycom-D Z",
+        "price": 1356,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 327"
+    },
+    {
+        "name": "Pan Gel X",
+        "price": 58,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 328"
+    },
+    {
+        "name": "Rosu Capsule Z",
+        "price": 1119,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 329"
+    },
+    {
+        "name": "Nuro Syrup B",
+        "price": 541,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 330"
+    },
+    {
+        "name": "Atorva Gel B",
+        "price": 396,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 331"
+    },
+    {
+        "name": "Mont Capsule Z",
+        "price": 1659,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 332"
+    },
+    {
+        "name": "Voldin 650 B",
+        "price": 984,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 333"
+    },
+    {
+        "name": "Nuro Tablet X",
+        "price": 300,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 334"
+    },
+    {
+        "name": "Telmi Gel Z",
+        "price": 2461,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 335"
+    },
+    {
+        "name": "Dolo 650 B",
+        "price": 2352,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 336"
+    },
+    {
+        "name": "Zitro 650 Z",
+        "price": 2110,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 337"
+    },
+    {
+        "name": "Zitro Tablet B",
+        "price": 1026,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 338"
+    },
+    {
+        "name": "Glycom 650 B",
+        "price": 136,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 339"
+    },
+    {
+        "name": "Zitro Syrup Z",
+        "price": 1046,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 340"
+    },
+    {
+        "name": "Dolo-D C",
+        "price": 2431,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 341"
+    },
+    {
+        "name": "Pan Syrup X",
+        "price": 422,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 342"
+    },
+    {
+        "name": "Glycom SR A",
+        "price": 1546,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 343"
+    },
+    {
+        "name": "Glycom Syrup Z",
+        "price": 2194,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 344"
+    },
+    {
+        "name": "Glycom Capsule B",
+        "price": 1738,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 345"
+    },
+    {
+        "name": "Glycom 650 A",
+        "price": 153,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 346"
+    },
+    {
+        "name": "Glycom Tablet B",
+        "price": 2091,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 347"
+    },
+    {
+        "name": "Telmi Capsule C",
+        "price": 382,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 348"
+    },
+    {
+        "name": "Atorva Forte A",
+        "price": 1554,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 349"
+    },
+    {
+        "name": "Mont Tablet B",
+        "price": 1057,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 350"
+    },
+    {
+        "name": "Rosu Tablet Z",
+        "price": 1190,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 351"
+    },
+    {
+        "name": "Rosu Gel A",
+        "price": 357,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 352"
+    },
+    {
+        "name": "Mont Tablet Z",
+        "price": 238,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 353"
+    },
+    {
+        "name": "Pan 650 Z",
+        "price": 827,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 354"
+    },
+    {
+        "name": "Mont Forte Z",
+        "price": 1143,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 355"
+    },
+    {
+        "name": "Nuro 500 X",
+        "price": 707,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 356"
+    },
+    {
+        "name": "Zitro Forte A",
+        "price": 817,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 357"
+    },
+    {
+        "name": "Telmi Syrup Z",
+        "price": 1815,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 358"
+    },
+    {
+        "name": "Glycom SR C",
+        "price": 1485,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 359"
+    },
+    {
+        "name": "Telmi SR Z",
+        "price": 1752,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 360"
+    },
+    {
+        "name": "Zitro Plus A",
+        "price": 1854,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 361"
+    },
+    {
+        "name": "Atorva SR C",
+        "price": 1592,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 362"
+    },
+    {
+        "name": "Zitro Forte Z",
+        "price": 750,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 363"
+    },
+    {
+        "name": "Zitro Forte Z",
+        "price": 427,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 364"
+    },
+    {
+        "name": "Nuro Plus A",
+        "price": 170,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 365"
+    },
+    {
+        "name": "Dolo SR A",
+        "price": 1638,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 366"
+    },
+    {
+        "name": "Atorva 650 C",
+        "price": 1740,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 367"
+    },
+    {
+        "name": "Mont Plus B",
+        "price": 484,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 368"
+    },
+    {
+        "name": "Zitro 650 X",
+        "price": 2242,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 369"
+    },
+    {
+        "name": "Pan Gel A",
+        "price": 766,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 370"
+    },
+    {
+        "name": "Nuro Plus A",
+        "price": 2033,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 371"
+    },
+    {
+        "name": "Zitro Tablet Z",
+        "price": 201,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 372"
+    },
+    {
+        "name": "Mont SR C",
+        "price": 1380,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 373"
+    },
+    {
+        "name": "Nuro Syrup Z",
+        "price": 558,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 374"
+    },
+    {
+        "name": "Dolo Capsule B",
+        "price": 531,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 375"
+    },
+    {
+        "name": "Voldin 650 A",
+        "price": 344,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 376"
+    },
+    {
+        "name": "Glycom Plus B",
+        "price": 1377,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 377"
+    },
+    {
+        "name": "Voldin Gel X",
+        "price": 1675,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 378"
+    },
+    {
+        "name": "Atorva Capsule Z",
+        "price": 1973,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 379"
+    },
+    {
+        "name": "Voldin Capsule C",
+        "price": 2324,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 380"
+    },
+    {
+        "name": "Mont SR B",
+        "price": 754,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 381"
+    },
+    {
+        "name": "Rosu 650 A",
+        "price": 258,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 382"
+    },
+    {
+        "name": "Telmi Forte C",
+        "price": 1476,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 383"
+    },
+    {
+        "name": "Telmi-D A",
+        "price": 1276,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 384"
+    },
+    {
+        "name": "Mont-D A",
+        "price": 161,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 385"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 454,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 386"
+    },
+    {
+        "name": "Pan Capsule A",
+        "price": 593,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 387"
+    },
+    {
+        "name": "Telmi Tablet C",
+        "price": 890,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 388"
+    },
+    {
+        "name": "Dolo SR X",
+        "price": 1951,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 389"
+    },
+    {
+        "name": "Telmi Gel B",
+        "price": 2131,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 390"
+    },
+    {
+        "name": "Voldin Syrup B",
+        "price": 2254,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 391"
+    },
+    {
+        "name": "Telmi Gel C",
+        "price": 782,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 392"
+    },
+    {
+        "name": "Telmi 650 X",
+        "price": 702,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 393"
+    },
+    {
+        "name": "Nuro Tablet A",
+        "price": 1746,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 394"
+    },
+    {
+        "name": "Zitro Forte B",
+        "price": 1339,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 395"
+    },
+    {
+        "name": "Zitro Forte Z",
+        "price": 1497,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 396"
+    },
+    {
+        "name": "Rosu Syrup B",
+        "price": 1826,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 397"
+    },
+    {
+        "name": "Mont Capsule C",
+        "price": 1006,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 398"
+    },
+    {
+        "name": "Rosu Syrup X",
+        "price": 2188,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 399"
+    },
+    {
+        "name": "Glycom Capsule C",
+        "price": 1243,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 400"
+    },
+    {
+        "name": "Rosu SR Z",
+        "price": 713,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 401"
+    },
+    {
+        "name": "Mont Capsule C",
+        "price": 2180,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 402"
+    },
+    {
+        "name": "Pan 500 X",
+        "price": 602,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 403"
+    },
+    {
+        "name": "Mont Plus B",
+        "price": 2488,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 404"
+    },
+    {
+        "name": "Rosu Capsule B",
+        "price": 1051,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 405"
+    },
+    {
+        "name": "Zitro 500 C",
+        "price": 1766,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 406"
+    },
+    {
+        "name": "Voldin 500 C",
+        "price": 1264,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 407"
+    },
+    {
+        "name": "Glycom-D A",
+        "price": 2400,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 408"
+    },
+    {
+        "name": "Zitro Plus A",
+        "price": 1388,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 409"
+    },
+    {
+        "name": "Glycom Capsule C",
+        "price": 1169,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 410"
+    },
+    {
+        "name": "Glycom 500 Z",
+        "price": 1229,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 411"
+    },
+    {
+        "name": "Nuro Capsule Z",
+        "price": 1808,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 412"
+    },
+    {
+        "name": "Zitro 500 C",
+        "price": 2259,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 413"
+    },
+    {
+        "name": "Atorva SR Z",
+        "price": 633,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 414"
+    },
+    {
+        "name": "Telmi Tablet X",
+        "price": 2091,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 415"
+    },
+    {
+        "name": "Nuro 650 C",
+        "price": 1327,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 416"
+    },
+    {
+        "name": "Rosu Syrup B",
+        "price": 333,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 417"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 337,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 418"
+    },
+    {
+        "name": "Telmi Plus C",
+        "price": 1214,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 419"
+    },
+    {
+        "name": "Mont SR Z",
+        "price": 2085,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 420"
+    },
+    {
+        "name": "Glycom SR Z",
+        "price": 2145,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 421"
+    },
+    {
+        "name": "Nuro 500 A",
+        "price": 313,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 422"
+    },
+    {
+        "name": "Pan-D X",
+        "price": 1993,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 423"
+    },
+    {
+        "name": "Rosu 650 A",
+        "price": 574,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 424"
+    },
+    {
+        "name": "Mont-D A",
+        "price": 1262,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 425"
+    },
+    {
+        "name": "Glycom 500 Z",
+        "price": 624,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 426"
+    },
+    {
+        "name": "Nuro Gel Z",
+        "price": 120,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 427"
+    },
+    {
+        "name": "Dolo SR A",
+        "price": 904,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 428"
+    },
+    {
+        "name": "Rosu Syrup X",
+        "price": 1460,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 429"
+    },
+    {
+        "name": "Rosu Capsule A",
+        "price": 1929,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 430"
+    },
+    {
+        "name": "Nuro Forte Z",
+        "price": 1093,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 431"
+    },
+    {
+        "name": "Pan Capsule A",
+        "price": 238,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 432"
+    },
+    {
+        "name": "Atorva Syrup Z",
+        "price": 1253,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 433"
+    },
+    {
+        "name": "Zitro-D C",
+        "price": 1549,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 434"
+    },
+    {
+        "name": "Nuro Capsule A",
+        "price": 1288,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 435"
+    },
+    {
+        "name": "Nuro SR B",
+        "price": 362,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 436"
+    },
+    {
+        "name": "Zitro Gel X",
+        "price": 144,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 437"
+    },
+    {
+        "name": "Glycom 500 X",
+        "price": 2440,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 438"
+    },
+    {
+        "name": "Glycom Forte A",
+        "price": 1177,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 439"
+    },
+    {
+        "name": "Dolo 650 C",
+        "price": 1940,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 440"
+    },
+    {
+        "name": "Dolo 650 Z",
+        "price": 1626,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 441"
+    },
+    {
+        "name": "Atorva Gel X",
+        "price": 282,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 442"
+    },
+    {
+        "name": "Rosu-D C",
+        "price": 466,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 443"
+    },
+    {
+        "name": "Glycom Plus A",
+        "price": 1140,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 444"
+    },
+    {
+        "name": "Telmi Forte X",
+        "price": 938,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 445"
+    },
+    {
+        "name": "Voldin 650 C",
+        "price": 134,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 446"
+    },
+    {
+        "name": "Dolo Plus C",
+        "price": 1868,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 447"
+    },
+    {
+        "name": "Rosu 500 X",
+        "price": 506,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 448"
+    },
+    {
+        "name": "Mont Syrup B",
+        "price": 832,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 449"
+    },
+    {
+        "name": "Rosu-D A",
+        "price": 2498,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 450"
+    },
+    {
+        "name": "Zitro 650 X",
+        "price": 2194,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 451"
+    },
+    {
+        "name": "Pan 650 C",
+        "price": 389,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 452"
+    },
+    {
+        "name": "Voldin 650 A",
+        "price": 1993,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 453"
+    },
+    {
+        "name": "Telmi 500 X",
+        "price": 734,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 454"
+    },
+    {
+        "name": "Mont 500 X",
+        "price": 511,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 455"
+    },
+    {
+        "name": "Zitro Syrup Z",
+        "price": 2181,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 456"
+    },
+    {
+        "name": "Pan Capsule C",
+        "price": 1093,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 457"
+    },
+    {
+        "name": "Glycom Gel A",
+        "price": 704,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 458"
+    },
+    {
+        "name": "Mont-D X",
+        "price": 135,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 459"
+    },
+    {
+        "name": "Pan Plus Z",
+        "price": 1300,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 460"
+    },
+    {
+        "name": "Voldin-D X",
+        "price": 1399,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 461"
+    },
+    {
+        "name": "Dolo Plus X",
+        "price": 386,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 462"
+    },
+    {
+        "name": "Dolo Gel C",
+        "price": 1550,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 463"
+    },
+    {
+        "name": "Nuro Tablet Z",
+        "price": 85,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 464"
+    },
+    {
+        "name": "Pan Gel Z",
+        "price": 717,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 465"
+    },
+    {
+        "name": "Dolo Forte Z",
+        "price": 2125,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 466"
+    },
+    {
+        "name": "Voldin 500 A",
+        "price": 813,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 467"
+    },
+    {
+        "name": "Nuro Syrup A",
+        "price": 566,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 468"
+    },
+    {
+        "name": "Mont SR X",
+        "price": 73,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 469"
+    },
+    {
+        "name": "Atorva Capsule Z",
+        "price": 1196,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 470"
+    },
+    {
+        "name": "Telmi Syrup A",
+        "price": 1314,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 471"
+    },
+    {
+        "name": "Mont Forte C",
+        "price": 641,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 472"
+    },
+    {
+        "name": "Dolo-D B",
+        "price": 599,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 473"
+    },
+    {
+        "name": "Nuro Gel X",
+        "price": 1052,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 474"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 449,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 475"
+    },
+    {
+        "name": "Nuro 500 Z",
+        "price": 1301,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 476"
+    },
+    {
+        "name": "Voldin SR C",
+        "price": 1545,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 477"
+    },
+    {
+        "name": "Rosu Syrup X",
+        "price": 876,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 478"
+    },
+    {
+        "name": "Dolo SR B",
+        "price": 2309,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 479"
+    },
+    {
+        "name": "Zitro Forte X",
+        "price": 596,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 480"
+    },
+    {
+        "name": "Telmi Capsule C",
+        "price": 1070,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 481"
+    },
+    {
+        "name": "Mont 500 X",
+        "price": 1803,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 482"
+    },
+    {
+        "name": "Voldin 500 A",
+        "price": 1923,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 483"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 1260,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 484"
+    },
+    {
+        "name": "Glycom 500 B",
+        "price": 805,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 485"
+    },
+    {
+        "name": "Glycom Tablet A",
+        "price": 1359,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 486"
+    },
+    {
+        "name": "Mont 650 A",
+        "price": 853,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 487"
+    },
+    {
+        "name": "Dolo Tablet B",
+        "price": 300,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 488"
+    },
+    {
+        "name": "Telmi-D A",
+        "price": 977,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 489"
+    },
+    {
+        "name": "Nuro 500 C",
+        "price": 1052,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 490"
+    },
+    {
+        "name": "Glycom 500 Z",
+        "price": 313,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 491"
+    },
+    {
+        "name": "Voldin Plus B",
+        "price": 55,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 492"
+    },
+    {
+        "name": "Atorva 650 B",
+        "price": 1467,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 493"
+    },
+    {
+        "name": "Voldin 500 X",
+        "price": 179,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 494"
+    },
+    {
+        "name": "Dolo Capsule B",
+        "price": 2137,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 495"
+    },
+    {
+        "name": "Telmi Tablet Z",
+        "price": 1404,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 496"
+    },
+    {
+        "name": "Rosu 650 B",
+        "price": 1594,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 497"
+    },
+    {
+        "name": "Atorva Tablet C",
+        "price": 221,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 498"
+    },
+    {
+        "name": "Rosu Gel C",
+        "price": 1527,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 499"
+    },
+    {
+        "name": "Dolo Gel B",
+        "price": 2372,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 500"
+    },
+    {
+        "name": "Zitro Syrup A",
+        "price": 1834,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 501"
+    },
+    {
+        "name": "Nuro Forte X",
+        "price": 2176,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 502"
+    },
+    {
+        "name": "Zitro Gel Z",
+        "price": 857,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 503"
+    },
+    {
+        "name": "Nuro 650 B",
+        "price": 1001,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 504"
+    },
+    {
+        "name": "Rosu Tablet C",
+        "price": 574,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 505"
+    },
+    {
+        "name": "Mont Syrup A",
+        "price": 1577,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 506"
+    },
+    {
+        "name": "Glycom 650 X",
+        "price": 766,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 507"
+    },
+    {
+        "name": "Pan-D Z",
+        "price": 971,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 508"
+    },
+    {
+        "name": "Voldin SR X",
+        "price": 2117,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 509"
+    },
+    {
+        "name": "Nuro Syrup Z",
+        "price": 629,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 510"
+    },
+    {
+        "name": "Rosu Gel Z",
+        "price": 1645,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 511"
+    },
+    {
+        "name": "Atorva Capsule Z",
+        "price": 1084,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 512"
+    },
+    {
+        "name": "Pan Forte X",
+        "price": 2251,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 513"
+    },
+    {
+        "name": "Pan SR B",
+        "price": 1008,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 514"
+    },
+    {
+        "name": "Nuro 500 B",
+        "price": 873,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 515"
+    },
+    {
+        "name": "Voldin-D B",
+        "price": 1745,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 516"
+    },
+    {
+        "name": "Nuro Capsule A",
+        "price": 616,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 517"
+    },
+    {
+        "name": "Dolo Capsule X",
+        "price": 1223,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 518"
+    },
+    {
+        "name": "Atorva Syrup A",
+        "price": 607,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 519"
+    },
+    {
+        "name": "Telmi Forte C",
+        "price": 2113,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 520"
+    },
+    {
+        "name": "Pan Plus C",
+        "price": 1308,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 521"
+    },
+    {
+        "name": "Zitro 500 B",
+        "price": 582,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 522"
+    },
+    {
+        "name": "Pan Syrup C",
+        "price": 260,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 523"
+    },
+    {
+        "name": "Voldin 500 X",
+        "price": 1431,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 524"
+    },
+    {
+        "name": "Telmi Tablet X",
+        "price": 1764,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 525"
+    },
+    {
+        "name": "Atorva SR C",
+        "price": 555,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 526"
+    },
+    {
+        "name": "Pan Plus C",
+        "price": 2197,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 527"
+    },
+    {
+        "name": "Glycom SR X",
+        "price": 2192,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 528"
+    },
+    {
+        "name": "Atorva Tablet C",
+        "price": 824,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 529"
+    },
+    {
+        "name": "Zitro Plus B",
+        "price": 1827,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 530"
+    },
+    {
+        "name": "Dolo Syrup C",
+        "price": 192,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 531"
+    },
+    {
+        "name": "Dolo Syrup Z",
+        "price": 1514,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 532"
+    },
+    {
+        "name": "Telmi 650 C",
+        "price": 1886,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 533"
+    },
+    {
+        "name": "Nuro Capsule B",
+        "price": 1687,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 534"
+    },
+    {
+        "name": "Zitro-D X",
+        "price": 146,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 535"
+    },
+    {
+        "name": "Telmi 500 B",
+        "price": 694,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 536"
+    },
+    {
+        "name": "Glycom 650 X",
+        "price": 364,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 537"
+    },
+    {
+        "name": "Pan Forte Z",
+        "price": 893,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 538"
+    },
+    {
+        "name": "Voldin 650 C",
+        "price": 800,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 539"
+    },
+    {
+        "name": "Nuro Tablet C",
+        "price": 2286,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 540"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 2420,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 541"
+    },
+    {
+        "name": "Telmi Syrup C",
+        "price": 923,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 542"
+    },
+    {
+        "name": "Voldin Gel X",
+        "price": 2306,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 543"
+    },
+    {
+        "name": "Glycom 650 C",
+        "price": 838,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 544"
+    },
+    {
+        "name": "Dolo Forte B",
+        "price": 591,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 545"
+    },
+    {
+        "name": "Rosu 650 C",
+        "price": 1201,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 546"
+    },
+    {
+        "name": "Dolo Gel A",
+        "price": 1210,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 547"
+    },
+    {
+        "name": "Dolo Forte C",
+        "price": 197,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 548"
+    },
+    {
+        "name": "Nuro Capsule C",
+        "price": 998,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 549"
+    },
+    {
+        "name": "Voldin Forte A",
+        "price": 723,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 550"
+    },
+    {
+        "name": "Rosu SR C",
+        "price": 2330,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 551"
+    },
+    {
+        "name": "Nuro SR Z",
+        "price": 1568,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 552"
+    },
+    {
+        "name": "Mont SR Z",
+        "price": 276,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 553"
+    },
+    {
+        "name": "Voldin Capsule X",
+        "price": 1229,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 554"
+    },
+    {
+        "name": "Mont Tablet C",
+        "price": 469,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 555"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 1521,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 556"
+    },
+    {
+        "name": "Voldin Gel B",
+        "price": 1375,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 557"
+    },
+    {
+        "name": "Voldin Plus B",
+        "price": 2151,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 558"
+    },
+    {
+        "name": "Voldin Capsule B",
+        "price": 1913,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 559"
+    },
+    {
+        "name": "Dolo 500 C",
+        "price": 1788,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 560"
+    },
+    {
+        "name": "Nuro Syrup A",
+        "price": 1012,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 561"
+    },
+    {
+        "name": "Atorva Plus A",
+        "price": 2428,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 562"
+    },
+    {
+        "name": "Voldin 500 X",
+        "price": 684,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 563"
+    },
+    {
+        "name": "Glycom Syrup X",
+        "price": 1500,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 564"
+    },
+    {
+        "name": "Nuro Forte X",
+        "price": 502,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 565"
+    },
+    {
+        "name": "Pan-D A",
+        "price": 231,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 566"
+    },
+    {
+        "name": "Dolo SR X",
+        "price": 1202,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 567"
+    },
+    {
+        "name": "Nuro Gel A",
+        "price": 2032,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 568"
+    },
+    {
+        "name": "Telmi Tablet A",
+        "price": 1164,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 569"
+    },
+    {
+        "name": "Dolo Syrup C",
+        "price": 639,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 570"
+    },
+    {
+        "name": "Nuro Tablet C",
+        "price": 70,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 571"
+    },
+    {
+        "name": "Pan Capsule Z",
+        "price": 2429,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 572"
+    },
+    {
+        "name": "Voldin SR A",
+        "price": 758,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 573"
+    },
+    {
+        "name": "Pan Plus B",
+        "price": 1640,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 574"
+    },
+    {
+        "name": "Pan Syrup Z",
+        "price": 225,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 575"
+    },
+    {
+        "name": "Pan Syrup Z",
+        "price": 353,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 576"
+    },
+    {
+        "name": "Glycom Gel A",
+        "price": 2195,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 577"
+    },
+    {
+        "name": "Dolo Plus A",
+        "price": 1773,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 578"
+    },
+    {
+        "name": "Voldin Gel A",
+        "price": 1861,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 579"
+    },
+    {
+        "name": "Atorva 500 X",
+        "price": 1094,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 580"
+    },
+    {
+        "name": "Rosu Plus X",
+        "price": 270,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 581"
+    },
+    {
+        "name": "Telmi Forte B",
+        "price": 1617,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 582"
+    },
+    {
+        "name": "Glycom Plus B",
+        "price": 1284,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 583"
+    },
+    {
+        "name": "Pan 500 X",
+        "price": 162,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 584"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 849,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 585"
+    },
+    {
+        "name": "Mont 650 Z",
+        "price": 729,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 586"
+    },
+    {
+        "name": "Rosu Tablet A",
+        "price": 1225,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 587"
+    },
+    {
+        "name": "Mont SR Z",
+        "price": 2304,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 588"
+    },
+    {
+        "name": "Dolo Syrup C",
+        "price": 629,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 589"
+    },
+    {
+        "name": "Glycom Plus C",
+        "price": 1027,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 590"
+    },
+    {
+        "name": "Zitro Capsule Z",
+        "price": 1449,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 591"
+    },
+    {
+        "name": "Mont Plus Z",
+        "price": 767,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 592"
+    },
+    {
+        "name": "Rosu-D X",
+        "price": 2420,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 593"
+    },
+    {
+        "name": "Telmi Tablet B",
+        "price": 628,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 594"
+    },
+    {
+        "name": "Glycom Tablet X",
+        "price": 1069,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 595"
+    },
+    {
+        "name": "Glycom SR Z",
+        "price": 1466,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 596"
+    },
+    {
+        "name": "Atorva SR Z",
+        "price": 1390,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 597"
+    },
+    {
+        "name": "Voldin Capsule Z",
+        "price": 1502,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 598"
+    },
+    {
+        "name": "Telmi Forte C",
+        "price": 512,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 599"
+    },
+    {
+        "name": "Glycom 650 Z",
+        "price": 2211,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 600"
+    },
+    {
+        "name": "Pan Plus Z",
+        "price": 1680,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 601"
+    },
+    {
+        "name": "Mont Syrup C",
+        "price": 2475,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 602"
+    },
+    {
+        "name": "Mont Tablet Z",
+        "price": 2457,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 603"
+    },
+    {
+        "name": "Voldin SR C",
+        "price": 1328,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 604"
+    },
+    {
+        "name": "Voldin Capsule C",
+        "price": 1494,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 605"
+    },
+    {
+        "name": "Glycom Plus A",
+        "price": 1267,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 606"
+    },
+    {
+        "name": "Pan Forte B",
+        "price": 1913,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 607"
+    },
+    {
+        "name": "Atorva-D A",
+        "price": 2254,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 608"
+    },
+    {
+        "name": "Dolo-D X",
+        "price": 1509,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 609"
+    },
+    {
+        "name": "Atorva Tablet Z",
+        "price": 2175,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 610"
+    },
+    {
+        "name": "Nuro Capsule B",
+        "price": 683,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 611"
+    },
+    {
+        "name": "Pan Capsule X",
+        "price": 1580,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 612"
+    },
+    {
+        "name": "Voldin Gel Z",
+        "price": 701,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 613"
+    },
+    {
+        "name": "Rosu-D A",
+        "price": 482,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 614"
+    },
+    {
+        "name": "Atorva 500 X",
+        "price": 684,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 615"
+    },
+    {
+        "name": "Rosu Plus C",
+        "price": 2406,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 616"
+    },
+    {
+        "name": "Nuro Plus Z",
+        "price": 2312,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 617"
+    },
+    {
+        "name": "Pan Capsule A",
+        "price": 1372,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 618"
+    },
+    {
+        "name": "Pan Plus B",
+        "price": 464,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 619"
+    },
+    {
+        "name": "Atorva Gel Z",
+        "price": 2061,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 620"
+    },
+    {
+        "name": "Dolo Capsule C",
+        "price": 1731,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 621"
+    },
+    {
+        "name": "Zitro Tablet Z",
+        "price": 1843,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 622"
+    },
+    {
+        "name": "Pan Plus A",
+        "price": 2243,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 623"
+    },
+    {
+        "name": "Zitro Plus A",
+        "price": 1837,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 624"
+    },
+    {
+        "name": "Mont Gel C",
+        "price": 1055,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 625"
+    },
+    {
+        "name": "Nuro 650 Z",
+        "price": 93,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 626"
+    },
+    {
+        "name": "Mont 650 C",
+        "price": 2144,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 627"
+    },
+    {
+        "name": "Pan Gel X",
+        "price": 1505,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 628"
+    },
+    {
+        "name": "Pan Syrup A",
+        "price": 2045,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 629"
+    },
+    {
+        "name": "Voldin SR C",
+        "price": 2287,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 630"
+    },
+    {
+        "name": "Zitro 500 X",
+        "price": 148,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 631"
+    },
+    {
+        "name": "Telmi Forte Z",
+        "price": 1380,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 632"
+    },
+    {
+        "name": "Rosu Tablet B",
+        "price": 518,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 633"
+    },
+    {
+        "name": "Zitro Forte X",
+        "price": 1375,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 634"
+    },
+    {
+        "name": "Rosu Syrup X",
+        "price": 1960,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 635"
+    },
+    {
+        "name": "Nuro Capsule Z",
+        "price": 764,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 636"
+    },
+    {
+        "name": "Atorva SR Z",
+        "price": 833,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 637"
+    },
+    {
+        "name": "Zitro Gel A",
+        "price": 325,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 638"
+    },
+    {
+        "name": "Voldin Capsule X",
+        "price": 519,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 639"
+    },
+    {
+        "name": "Atorva 500 Z",
+        "price": 1676,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 640"
+    },
+    {
+        "name": "Telmi Syrup C",
+        "price": 2135,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 641"
+    },
+    {
+        "name": "Dolo 650 X",
+        "price": 2418,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 642"
+    },
+    {
+        "name": "Glycom Capsule X",
+        "price": 1430,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 643"
+    },
+    {
+        "name": "Dolo Capsule Z",
+        "price": 2356,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 644"
+    },
+    {
+        "name": "Rosu Syrup A",
+        "price": 307,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 645"
+    },
+    {
+        "name": "Rosu Gel A",
+        "price": 797,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 646"
+    },
+    {
+        "name": "Telmi Forte Z",
+        "price": 564,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 647"
+    },
+    {
+        "name": "Atorva 650 B",
+        "price": 2440,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 648"
+    },
+    {
+        "name": "Glycom Forte B",
+        "price": 1554,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 649"
+    },
+    {
+        "name": "Nuro Tablet C",
+        "price": 1705,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 650"
+    },
+    {
+        "name": "Nuro Syrup Z",
+        "price": 1279,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 651"
+    },
+    {
+        "name": "Mont 500 A",
+        "price": 1621,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 652"
+    },
+    {
+        "name": "Rosu Plus B",
+        "price": 304,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 653"
+    },
+    {
+        "name": "Dolo Plus A",
+        "price": 445,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 654"
+    },
+    {
+        "name": "Dolo Syrup A",
+        "price": 831,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 655"
+    },
+    {
+        "name": "Mont Forte Z",
+        "price": 2196,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 656"
+    },
+    {
+        "name": "Pan 650 B",
+        "price": 1696,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 657"
+    },
+    {
+        "name": "Atorva 500 Z",
+        "price": 2402,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 658"
+    },
+    {
+        "name": "Pan Syrup B",
+        "price": 663,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 659"
+    },
+    {
+        "name": "Glycom Forte X",
+        "price": 1580,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 660"
+    },
+    {
+        "name": "Telmi-D X",
+        "price": 1269,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 661"
+    },
+    {
+        "name": "Pan Forte Z",
+        "price": 1377,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 662"
+    },
+    {
+        "name": "Dolo 500 C",
+        "price": 996,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 663"
+    },
+    {
+        "name": "Dolo Syrup B",
+        "price": 391,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 664"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 746,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 665"
+    },
+    {
+        "name": "Voldin SR B",
+        "price": 1861,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 666"
+    },
+    {
+        "name": "Glycom SR C",
+        "price": 1209,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 667"
+    },
+    {
+        "name": "Glycom Syrup X",
+        "price": 468,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 668"
+    },
+    {
+        "name": "Glycom Plus X",
+        "price": 1677,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 669"
+    },
+    {
+        "name": "Mont Capsule X",
+        "price": 602,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 670"
+    },
+    {
+        "name": "Nuro Plus Z",
+        "price": 704,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 671"
+    },
+    {
+        "name": "Zitro-D Z",
+        "price": 2253,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 672"
+    },
+    {
+        "name": "Telmi 500 B",
+        "price": 963,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 673"
+    },
+    {
+        "name": "Zitro 650 C",
+        "price": 2340,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 674"
+    },
+    {
+        "name": "Mont Syrup A",
+        "price": 146,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 675"
+    },
+    {
+        "name": "Voldin Gel Z",
+        "price": 1492,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 676"
+    },
+    {
+        "name": "Dolo Syrup B",
+        "price": 688,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 677"
+    },
+    {
+        "name": "Telmi-D A",
+        "price": 1096,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 678"
+    },
+    {
+        "name": "Nuro Capsule X",
+        "price": 1890,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 679"
+    },
+    {
+        "name": "Rosu SR Z",
+        "price": 1023,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 680"
+    },
+    {
+        "name": "Zitro Forte B",
+        "price": 807,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 681"
+    },
+    {
+        "name": "Pan Gel Z",
+        "price": 630,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 682"
+    },
+    {
+        "name": "Telmi Syrup B",
+        "price": 1041,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 683"
+    },
+    {
+        "name": "Voldin Capsule A",
+        "price": 1360,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 684"
+    },
+    {
+        "name": "Rosu Tablet X",
+        "price": 375,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 685"
+    },
+    {
+        "name": "Dolo Syrup C",
+        "price": 2005,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 686"
+    },
+    {
+        "name": "Dolo-D X",
+        "price": 1963,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 687"
+    },
+    {
+        "name": "Dolo 650 C",
+        "price": 1638,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 688"
+    },
+    {
+        "name": "Nuro Capsule C",
+        "price": 1039,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 689"
+    },
+    {
+        "name": "Voldin Plus X",
+        "price": 1172,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 690"
+    },
+    {
+        "name": "Telmi SR A",
+        "price": 1994,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 691"
+    },
+    {
+        "name": "Dolo Capsule Z",
+        "price": 2206,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 692"
+    },
+    {
+        "name": "Dolo SR Z",
+        "price": 790,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 693"
+    },
+    {
+        "name": "Pan SR A",
+        "price": 1288,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 694"
+    },
+    {
+        "name": "Glycom 500 Z",
+        "price": 79,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 695"
+    },
+    {
+        "name": "Nuro 650 C",
+        "price": 365,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 696"
+    },
+    {
+        "name": "Zitro Tablet C",
+        "price": 1660,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 697"
+    },
+    {
+        "name": "Atorva Plus Z",
+        "price": 1807,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 698"
+    },
+    {
+        "name": "Zitro SR Z",
+        "price": 2057,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 699"
+    },
+    {
+        "name": "Mont 650 A",
+        "price": 503,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 700"
+    },
+    {
+        "name": "Atorva Tablet C",
+        "price": 79,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 701"
+    },
+    {
+        "name": "Atorva Syrup Z",
+        "price": 317,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 702"
+    },
+    {
+        "name": "Voldin Syrup X",
+        "price": 349,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 703"
+    },
+    {
+        "name": "Glycom-D A",
+        "price": 1300,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 704"
+    },
+    {
+        "name": "Nuro SR A",
+        "price": 1735,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 705"
+    },
+    {
+        "name": "Dolo Syrup A",
+        "price": 834,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 706"
+    },
+    {
+        "name": "Nuro SR A",
+        "price": 2316,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 707"
+    },
+    {
+        "name": "Pan Syrup X",
+        "price": 928,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 708"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 1320,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 709"
+    },
+    {
+        "name": "Dolo Plus X",
+        "price": 1470,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 710"
+    },
+    {
+        "name": "Nuro Gel B",
+        "price": 2159,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 711"
+    },
+    {
+        "name": "Glycom SR X",
+        "price": 1030,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 712"
+    },
+    {
+        "name": "Atorva Plus C",
+        "price": 1358,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 713"
+    },
+    {
+        "name": "Mont 500 B",
+        "price": 567,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 714"
+    },
+    {
+        "name": "Dolo 650 X",
+        "price": 741,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 715"
+    },
+    {
+        "name": "Pan SR A",
+        "price": 770,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 716"
+    },
+    {
+        "name": "Mont Capsule Z",
+        "price": 233,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 717"
+    },
+    {
+        "name": "Dolo 500 A",
+        "price": 2335,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 718"
+    },
+    {
+        "name": "Glycom 650 X",
+        "price": 1694,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 719"
+    },
+    {
+        "name": "Mont Forte Z",
+        "price": 1969,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 720"
+    },
+    {
+        "name": "Pan Forte B",
+        "price": 1167,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 721"
+    },
+    {
+        "name": "Glycom Gel Z",
+        "price": 2428,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 722"
+    },
+    {
+        "name": "Atorva-D C",
+        "price": 2095,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 723"
+    },
+    {
+        "name": "Telmi Syrup X",
+        "price": 691,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 724"
+    },
+    {
+        "name": "Atorva Gel A",
+        "price": 1678,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 725"
+    },
+    {
+        "name": "Zitro SR B",
+        "price": 2430,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 726"
+    },
+    {
+        "name": "Telmi SR X",
+        "price": 785,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 727"
+    },
+    {
+        "name": "Mont 650 X",
+        "price": 1190,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 728"
+    },
+    {
+        "name": "Nuro Capsule X",
+        "price": 289,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 729"
+    },
+    {
+        "name": "Telmi SR X",
+        "price": 2303,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 730"
+    },
+    {
+        "name": "Voldin SR Z",
+        "price": 2055,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 731"
+    },
+    {
+        "name": "Pan 500 A",
+        "price": 87,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 732"
+    },
+    {
+        "name": "Mont Syrup A",
+        "price": 643,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 733"
+    },
+    {
+        "name": "Mont-D Z",
+        "price": 1551,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 734"
+    },
+    {
+        "name": "Glycom 650 Z",
+        "price": 581,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 735"
+    },
+    {
+        "name": "Dolo 650 B",
+        "price": 867,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 736"
+    },
+    {
+        "name": "Dolo Capsule A",
+        "price": 323,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 737"
+    },
+    {
+        "name": "Voldin Gel Z",
+        "price": 2143,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 738"
+    },
+    {
+        "name": "Glycom Gel X",
+        "price": 1489,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 739"
+    },
+    {
+        "name": "Glycom SR A",
+        "price": 2189,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 740"
+    },
+    {
+        "name": "Dolo Forte C",
+        "price": 904,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 741"
+    },
+    {
+        "name": "Atorva 500 B",
+        "price": 1501,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 742"
+    },
+    {
+        "name": "Mont Tablet X",
+        "price": 116,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 743"
+    },
+    {
+        "name": "Dolo Capsule Z",
+        "price": 625,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 744"
+    },
+    {
+        "name": "Rosu-D B",
+        "price": 392,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 745"
+    },
+    {
+        "name": "Zitro-D X",
+        "price": 1009,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 746"
+    },
+    {
+        "name": "Telmi Capsule B",
+        "price": 2207,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 747"
+    },
+    {
+        "name": "Nuro Capsule B",
+        "price": 2175,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 748"
+    },
+    {
+        "name": "Mont Tablet B",
+        "price": 1848,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 749"
+    },
+    {
+        "name": "Atorva Forte C",
+        "price": 1511,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 750"
+    },
+    {
+        "name": "Voldin Forte C",
+        "price": 141,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 751"
+    },
+    {
+        "name": "Nuro 650 Z",
+        "price": 758,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 752"
+    },
+    {
+        "name": "Voldin Forte B",
+        "price": 754,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 753"
+    },
+    {
+        "name": "Dolo 650 A",
+        "price": 1262,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 754"
+    },
+    {
+        "name": "Atorva 500 X",
+        "price": 290,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 755"
+    },
+    {
+        "name": "Zitro 650 C",
+        "price": 1065,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 756"
+    },
+    {
+        "name": "Nuro Gel Z",
+        "price": 473,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 757"
+    },
+    {
+        "name": "Nuro Plus X",
+        "price": 1843,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 758"
+    },
+    {
+        "name": "Telmi-D Z",
+        "price": 2035,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 759"
+    },
+    {
+        "name": "Zitro 500 A",
+        "price": 236,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 760"
+    },
+    {
+        "name": "Zitro Capsule B",
+        "price": 1615,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 761"
+    },
+    {
+        "name": "Voldin Gel B",
+        "price": 813,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 762"
+    },
+    {
+        "name": "Mont Tablet C",
+        "price": 2260,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 763"
+    },
+    {
+        "name": "Mont Capsule C",
+        "price": 1248,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 764"
+    },
+    {
+        "name": "Pan Plus C",
+        "price": 2227,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 765"
+    },
+    {
+        "name": "Zitro 650 X",
+        "price": 854,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 766"
+    },
+    {
+        "name": "Pan 500 X",
+        "price": 1937,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 767"
+    },
+    {
+        "name": "Atorva 650 C",
+        "price": 1249,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 768"
+    },
+    {
+        "name": "Rosu SR C",
+        "price": 2334,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 769"
+    },
+    {
+        "name": "Telmi Gel A",
+        "price": 944,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 770"
+    },
+    {
+        "name": "Glycom SR X",
+        "price": 849,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 771"
+    },
+    {
+        "name": "Nuro Gel Z",
+        "price": 739,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 772"
+    },
+    {
+        "name": "Pan Gel A",
+        "price": 365,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 773"
+    },
+    {
+        "name": "Pan Gel A",
+        "price": 2012,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 774"
+    },
+    {
+        "name": "Glycom Tablet A",
+        "price": 486,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 775"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 1264,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 776"
+    },
+    {
+        "name": "Pan Forte B",
+        "price": 1378,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 777"
+    },
+    {
+        "name": "Glycom Capsule B",
+        "price": 546,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 778"
+    },
+    {
+        "name": "Atorva 500 Z",
+        "price": 1765,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 779"
+    },
+    {
+        "name": "Rosu Plus C",
+        "price": 2277,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 780"
+    },
+    {
+        "name": "Atorva Capsule X",
+        "price": 1645,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 781"
+    },
+    {
+        "name": "Telmi Tablet A",
+        "price": 922,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 782"
+    },
+    {
+        "name": "Nuro Gel Z",
+        "price": 2289,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 783"
+    },
+    {
+        "name": "Glycom SR B",
+        "price": 1922,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 784"
+    },
+    {
+        "name": "Voldin SR X",
+        "price": 2279,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 785"
+    },
+    {
+        "name": "Voldin Capsule B",
+        "price": 284,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 786"
+    },
+    {
+        "name": "Mont Tablet X",
+        "price": 825,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 787"
+    },
+    {
+        "name": "Dolo Tablet C",
+        "price": 100,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 788"
+    },
+    {
+        "name": "Voldin 650 B",
+        "price": 2161,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 789"
+    },
+    {
+        "name": "Voldin SR X",
+        "price": 1993,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 790"
+    },
+    {
+        "name": "Telmi-D Z",
+        "price": 949,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 791"
+    },
+    {
+        "name": "Nuro Gel C",
+        "price": 1688,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 792"
+    },
+    {
+        "name": "Rosu Capsule C",
+        "price": 1520,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 793"
+    },
+    {
+        "name": "Nuro Syrup A",
+        "price": 1258,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 794"
+    },
+    {
+        "name": "Dolo 650 Z",
+        "price": 235,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 795"
+    },
+    {
+        "name": "Telmi-D B",
+        "price": 1075,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 796"
+    },
+    {
+        "name": "Zitro 500 B",
+        "price": 703,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 797"
+    },
+    {
+        "name": "Mont Syrup A",
+        "price": 1896,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 798"
+    },
+    {
+        "name": "Telmi Tablet B",
+        "price": 2039,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 799"
+    },
+    {
+        "name": "Pan 500 C",
+        "price": 582,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 800"
+    },
+    {
+        "name": "Glycom Syrup B",
+        "price": 979,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 801"
+    },
+    {
+        "name": "Zitro Forte B",
+        "price": 825,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 802"
+    },
+    {
+        "name": "Mont Gel X",
+        "price": 1948,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 803"
+    },
+    {
+        "name": "Rosu Syrup Z",
+        "price": 1638,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 804"
+    },
+    {
+        "name": "Mont Gel Z",
+        "price": 2409,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 805"
+    },
+    {
+        "name": "Pan Capsule A",
+        "price": 1817,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 806"
+    },
+    {
+        "name": "Glycom Tablet Z",
+        "price": 946,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 807"
+    },
+    {
+        "name": "Zitro Forte A",
+        "price": 2477,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 808"
+    },
+    {
+        "name": "Atorva Forte X",
+        "price": 361,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 809"
+    },
+    {
+        "name": "Mont Tablet Z",
+        "price": 1406,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 810"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 1315,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 811"
+    },
+    {
+        "name": "Telmi SR B",
+        "price": 2213,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 812"
+    },
+    {
+        "name": "Mont 500 X",
+        "price": 1463,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 813"
+    },
+    {
+        "name": "Pan Capsule Z",
+        "price": 2018,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 814"
+    },
+    {
+        "name": "Mont Tablet B",
+        "price": 2430,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 815"
+    },
+    {
+        "name": "Telmi Forte X",
+        "price": 98,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 816"
+    },
+    {
+        "name": "Voldin Gel A",
+        "price": 1753,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 817"
+    },
+    {
+        "name": "Pan Plus X",
+        "price": 1985,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 818"
+    },
+    {
+        "name": "Rosu Forte X",
+        "price": 1548,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 819"
+    },
+    {
+        "name": "Rosu SR A",
+        "price": 2401,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 820"
+    },
+    {
+        "name": "Mont 650 B",
+        "price": 708,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 821"
+    },
+    {
+        "name": "Voldin Tablet Z",
+        "price": 1073,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 822"
+    },
+    {
+        "name": "Voldin 650 B",
+        "price": 1318,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 823"
+    },
+    {
+        "name": "Zitro Gel B",
+        "price": 1705,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 824"
+    },
+    {
+        "name": "Glycom Forte C",
+        "price": 2341,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 825"
+    },
+    {
+        "name": "Zitro Tablet B",
+        "price": 594,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 826"
+    },
+    {
+        "name": "Mont Capsule C",
+        "price": 697,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 827"
+    },
+    {
+        "name": "Pan Plus C",
+        "price": 885,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 828"
+    },
+    {
+        "name": "Voldin SR C",
+        "price": 2482,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 829"
+    },
+    {
+        "name": "Telmi Plus X",
+        "price": 2239,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 830"
+    },
+    {
+        "name": "Glycom Tablet B",
+        "price": 2369,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 831"
+    },
+    {
+        "name": "Nuro Syrup A",
+        "price": 2025,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 832"
+    },
+    {
+        "name": "Pan-D Z",
+        "price": 407,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 833"
+    },
+    {
+        "name": "Nuro Forte X",
+        "price": 659,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 834"
+    },
+    {
+        "name": "Glycom Syrup B",
+        "price": 751,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 835"
+    },
+    {
+        "name": "Glycom Gel A",
+        "price": 2062,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 836"
+    },
+    {
+        "name": "Dolo 650 B",
+        "price": 59,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 837"
+    },
+    {
+        "name": "Voldin SR Z",
+        "price": 1512,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 838"
+    },
+    {
+        "name": "Atorva Capsule Z",
+        "price": 2029,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 839"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 1645,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 840"
+    },
+    {
+        "name": "Voldin 500 A",
+        "price": 2362,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 841"
+    },
+    {
+        "name": "Atorva 650 Z",
+        "price": 1366,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 842"
+    },
+    {
+        "name": "Dolo 500 B",
+        "price": 942,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 843"
+    },
+    {
+        "name": "Nuro Plus Z",
+        "price": 654,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 844"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 2424,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 845"
+    },
+    {
+        "name": "Dolo Tablet A",
+        "price": 874,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 846"
+    },
+    {
+        "name": "Rosu 650 A",
+        "price": 2224,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 847"
+    },
+    {
+        "name": "Glycom Forte A",
+        "price": 2410,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 848"
+    },
+    {
+        "name": "Dolo Plus X",
+        "price": 597,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 849"
+    },
+    {
+        "name": "Nuro 500 C",
+        "price": 444,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 850"
+    },
+    {
+        "name": "Telmi Forte X",
+        "price": 887,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 851"
+    },
+    {
+        "name": "Zitro Syrup X",
+        "price": 1857,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 852"
+    },
+    {
+        "name": "Atorva Syrup Z",
+        "price": 1678,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 853"
+    },
+    {
+        "name": "Glycom Tablet B",
+        "price": 695,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 854"
+    },
+    {
+        "name": "Pan SR A",
+        "price": 2481,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 855"
+    },
+    {
+        "name": "Voldin Gel B",
+        "price": 1901,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 856"
+    },
+    {
+        "name": "Glycom Tablet B",
+        "price": 2363,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 857"
+    },
+    {
+        "name": "Pan 500 B",
+        "price": 1507,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 858"
+    },
+    {
+        "name": "Glycom SR Z",
+        "price": 151,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 859"
+    },
+    {
+        "name": "Dolo Gel Z",
+        "price": 1583,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 860"
+    },
+    {
+        "name": "Zitro 650 X",
+        "price": 1115,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 861"
+    },
+    {
+        "name": "Nuro Gel Z",
+        "price": 2440,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 862"
+    },
+    {
+        "name": "Mont Forte C",
+        "price": 898,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 863"
+    },
+    {
+        "name": "Voldin Capsule B",
+        "price": 745,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 864"
+    },
+    {
+        "name": "Voldin-D Z",
+        "price": 2266,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 865"
+    },
+    {
+        "name": "Rosu SR C",
+        "price": 529,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 866"
+    },
+    {
+        "name": "Mont Tablet C",
+        "price": 1514,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 867"
+    },
+    {
+        "name": "Pan Plus X",
+        "price": 276,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 868"
+    },
+    {
+        "name": "Rosu Syrup C",
+        "price": 1636,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 869"
+    },
+    {
+        "name": "Telmi 650 A",
+        "price": 83,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 870"
+    },
+    {
+        "name": "Voldin 650 A",
+        "price": 970,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 871"
+    },
+    {
+        "name": "Atorva Gel C",
+        "price": 2222,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 872"
+    },
+    {
+        "name": "Voldin Tablet Z",
+        "price": 1418,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 873"
+    },
+    {
+        "name": "Zitro SR A",
+        "price": 898,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 874"
+    },
+    {
+        "name": "Dolo Syrup A",
+        "price": 2231,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 875"
+    },
+    {
+        "name": "Telmi Tablet X",
+        "price": 2199,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 876"
+    },
+    {
+        "name": "Pan SR Z",
+        "price": 1855,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 877"
+    },
+    {
+        "name": "Voldin Forte X",
+        "price": 1319,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 878"
+    },
+    {
+        "name": "Zitro-D C",
+        "price": 1971,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 879"
+    },
+    {
+        "name": "Mont Capsule Z",
+        "price": 1206,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 880"
+    },
+    {
+        "name": "Zitro SR A",
+        "price": 2401,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 881"
+    },
+    {
+        "name": "Zitro-D Z",
+        "price": 420,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 882"
+    },
+    {
+        "name": "Nuro 500 X",
+        "price": 1236,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 883"
+    },
+    {
+        "name": "Zitro SR X",
+        "price": 711,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 884"
+    },
+    {
+        "name": "Voldin Forte X",
+        "price": 2367,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 885"
+    },
+    {
+        "name": "Glycom Gel B",
+        "price": 296,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 886"
+    },
+    {
+        "name": "Atorva Tablet B",
+        "price": 1177,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 887"
+    },
+    {
+        "name": "Atorva 650 B",
+        "price": 956,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 888"
+    },
+    {
+        "name": "Dolo SR A",
+        "price": 2251,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 889"
+    },
+    {
+        "name": "Glycom Capsule B",
+        "price": 437,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 890"
+    },
+    {
+        "name": "Dolo Capsule A",
+        "price": 207,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 891"
+    },
+    {
+        "name": "Telmi Plus X",
+        "price": 1438,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 892"
+    },
+    {
+        "name": "Rosu SR Z",
+        "price": 1673,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 893"
+    },
+    {
+        "name": "Atorva SR A",
+        "price": 1712,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 894"
+    },
+    {
+        "name": "Atorva SR A",
+        "price": 155,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 895"
+    },
+    {
+        "name": "Dolo-D A",
+        "price": 477,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 896"
+    },
+    {
+        "name": "Zitro Syrup A",
+        "price": 1124,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 897"
+    },
+    {
+        "name": "Nuro SR Z",
+        "price": 2227,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 898"
+    },
+    {
+        "name": "Telmi 650 C",
+        "price": 277,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 899"
+    },
+    {
+        "name": "Nuro Forte A",
+        "price": 1505,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 900"
+    },
+    {
+        "name": "Nuro Plus A",
+        "price": 697,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 901"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 2497,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 902"
+    },
+    {
+        "name": "Zitro Tablet C",
+        "price": 1198,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 903"
+    },
+    {
+        "name": "Rosu Capsule A",
+        "price": 207,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 904"
+    },
+    {
+        "name": "Dolo Tablet C",
+        "price": 300,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 905"
+    },
+    {
+        "name": "Nuro 500 X",
+        "price": 1765,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 906"
+    },
+    {
+        "name": "Mont 650 B",
+        "price": 723,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 907"
+    },
+    {
+        "name": "Atorva Capsule B",
+        "price": 869,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 908"
+    },
+    {
+        "name": "Telmi Forte X",
+        "price": 2150,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 909"
+    },
+    {
+        "name": "Atorva-D A",
+        "price": 627,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 910"
+    },
+    {
+        "name": "Dolo Forte X",
+        "price": 1299,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 911"
+    },
+    {
+        "name": "Zitro 500 C",
+        "price": 339,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 912"
+    },
+    {
+        "name": "Pan Plus A",
+        "price": 1794,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 913"
+    },
+    {
+        "name": "Glycom Forte X",
+        "price": 328,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 914"
+    },
+    {
+        "name": "Glycom Capsule X",
+        "price": 2491,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 915"
+    },
+    {
+        "name": "Voldin 500 X",
+        "price": 2229,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 916"
+    },
+    {
+        "name": "Telmi Forte A",
+        "price": 1425,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 917"
+    },
+    {
+        "name": "Atorva-D X",
+        "price": 1976,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 918"
+    },
+    {
+        "name": "Rosu 500 C",
+        "price": 415,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 919"
+    },
+    {
+        "name": "Glycom Plus C",
+        "price": 1031,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 920"
+    },
+    {
+        "name": "Glycom SR X",
+        "price": 1489,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 921"
+    },
+    {
+        "name": "Pan Capsule Z",
+        "price": 891,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 922"
+    },
+    {
+        "name": "Nuro 650 Z",
+        "price": 2290,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 923"
+    },
+    {
+        "name": "Dolo Gel X",
+        "price": 2287,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 924"
+    },
+    {
+        "name": "Pan Forte Z",
+        "price": 2000,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 925"
+    },
+    {
+        "name": "Dolo Gel C",
+        "price": 2005,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 926"
+    },
+    {
+        "name": "Zitro Gel Z",
+        "price": 804,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 927"
+    },
+    {
+        "name": "Telmi SR X",
+        "price": 1207,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 928"
+    },
+    {
+        "name": "Zitro-D X",
+        "price": 1757,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 929"
+    },
+    {
+        "name": "Dolo Plus B",
+        "price": 2333,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 930"
+    },
+    {
+        "name": "Voldin 500 B",
+        "price": 643,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 931"
+    },
+    {
+        "name": "Zitro Capsule X",
+        "price": 951,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 932"
+    },
+    {
+        "name": "Atorva Plus X",
+        "price": 1465,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 933"
+    },
+    {
+        "name": "Telmi Capsule A",
+        "price": 1078,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 934"
+    },
+    {
+        "name": "Nuro SR B",
+        "price": 1366,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 935"
+    },
+    {
+        "name": "Dolo Plus X",
+        "price": 1365,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 936"
+    },
+    {
+        "name": "Telmi Capsule B",
+        "price": 1221,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 937"
+    },
+    {
+        "name": "Telmi Syrup X",
+        "price": 1113,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 938"
+    },
+    {
+        "name": "Pan Syrup A",
+        "price": 1292,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 939"
+    },
+    {
+        "name": "Voldin 500 C",
+        "price": 1755,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 940"
+    },
+    {
+        "name": "Voldin 650 B",
+        "price": 1194,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 941"
+    },
+    {
+        "name": "Rosu Gel B",
+        "price": 641,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 942"
+    },
+    {
+        "name": "Atorva 500 Z",
+        "price": 2145,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 943"
+    },
+    {
+        "name": "Glycom Plus X",
+        "price": 1227,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 944"
+    },
+    {
+        "name": "Telmi SR C",
+        "price": 1207,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 945"
+    },
+    {
+        "name": "Rosu Capsule Z",
+        "price": 937,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 946"
+    },
+    {
+        "name": "Rosu Plus A",
+        "price": 205,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 947"
+    },
+    {
+        "name": "Rosu 650 Z",
+        "price": 1751,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 948"
+    },
+    {
+        "name": "Telmi Capsule B",
+        "price": 892,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 949"
+    },
+    {
+        "name": "Atorva Plus C",
+        "price": 1413,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 950"
+    },
+    {
+        "name": "Nuro-D Z",
+        "price": 526,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 951"
+    },
+    {
+        "name": "Zitro Capsule B",
+        "price": 2111,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 952"
+    },
+    {
+        "name": "Telmi 500 Z",
+        "price": 336,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 953"
+    },
+    {
+        "name": "Dolo Gel C",
+        "price": 290,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 954"
+    },
+    {
+        "name": "Mont 650 B",
+        "price": 474,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 955"
+    },
+    {
+        "name": "Voldin-D Z",
+        "price": 1466,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 956"
+    },
+    {
+        "name": "Rosu Capsule Z",
+        "price": 347,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 957"
+    },
+    {
+        "name": "Mont SR Z",
+        "price": 962,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 958"
+    },
+    {
+        "name": "Pan Forte Z",
+        "price": 1004,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 959"
+    },
+    {
+        "name": "Zitro Syrup Z",
+        "price": 628,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 960"
+    },
+    {
+        "name": "Glycom 650 A",
+        "price": 213,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 961"
+    },
+    {
+        "name": "Pan-D B",
+        "price": 1323,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 962"
+    },
+    {
+        "name": "Telmi Forte Z",
+        "price": 1817,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 963"
+    },
+    {
+        "name": "Pan Forte A",
+        "price": 719,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 964"
+    },
+    {
+        "name": "Telmi Syrup Z",
+        "price": 470,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 965"
+    },
+    {
+        "name": "Dolo Tablet C",
+        "price": 1582,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 966"
+    },
+    {
+        "name": "Rosu 500 X",
+        "price": 1879,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 967"
+    },
+    {
+        "name": "Glycom 650 B",
+        "price": 1119,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 968"
+    },
+    {
+        "name": "Voldin Gel Z",
+        "price": 333,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 969"
+    },
+    {
+        "name": "Mont Syrup X",
+        "price": 690,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 970"
+    },
+    {
+        "name": "Nuro Syrup A",
+        "price": 1191,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 971"
+    },
+    {
+        "name": "Dolo 500 C",
+        "price": 2040,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 972"
+    },
+    {
+        "name": "Voldin SR B",
+        "price": 571,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 973"
+    },
+    {
+        "name": "Pan Gel X",
+        "price": 238,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 974"
+    },
+    {
+        "name": "Atorva-D Z",
+        "price": 1680,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 975"
+    },
+    {
+        "name": "Telmi Capsule X",
+        "price": 2044,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 976"
+    },
+    {
+        "name": "Mont Plus B",
+        "price": 1530,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 977"
+    },
+    {
+        "name": "Dolo-D B",
+        "price": 2114,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 978"
+    },
+    {
+        "name": "Atorva-D X",
+        "price": 2474,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 979"
+    },
+    {
+        "name": "Voldin 500 X",
+        "price": 1089,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 980"
+    },
+    {
+        "name": "Pan Gel X",
+        "price": 2477,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 981"
+    },
+    {
+        "name": "Voldin SR A",
+        "price": 1570,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 982"
+    },
+    {
+        "name": "Voldin-D C",
+        "price": 2431,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 983"
+    },
+    {
+        "name": "Pan Syrup X",
+        "price": 1232,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 984"
+    },
+    {
+        "name": "Mont Forte Z",
+        "price": 698,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 985"
+    },
+    {
+        "name": "Glycom Syrup C",
+        "price": 1425,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 986"
+    },
+    {
+        "name": "Zitro Gel C",
+        "price": 613,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 987"
+    },
+    {
+        "name": "Zitro Plus Z",
+        "price": 55,
+        "category": "General",
+        "description": "High-quality General formulation for clinical use. ID: 988"
+    },
+    {
+        "name": "Dolo 650 A",
+        "price": 929,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 989"
+    },
+    {
+        "name": "Dolo Capsule X",
+        "price": 2473,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 990"
+    },
+    {
+        "name": "Telmi 500 B",
+        "price": 1953,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 991"
+    },
+    {
+        "name": "Dolo Syrup Z",
+        "price": 2463,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 992"
+    },
+    {
+        "name": "Mont Tablet Z",
+        "price": 2476,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 993"
+    },
+    {
+        "name": "Pan SR Z",
+        "price": 1549,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 994"
+    },
+    {
+        "name": "Zitro Forte X",
+        "price": 1842,
+        "category": "Cardiology",
+        "description": "High-quality Cardiology formulation for clinical use. ID: 995"
+    },
+    {
+        "name": "Pan-D B",
+        "price": 1014,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 996"
+    },
+    {
+        "name": "Rosu 650 A",
+        "price": 287,
+        "category": "Oncology",
+        "description": "High-quality Oncology formulation for clinical use. ID: 997"
+    },
+    {
+        "name": "Mont Tablet C",
+        "price": 2457,
+        "category": "Critical Care",
+        "description": "High-quality Critical Care formulation for clinical use. ID: 998"
+    },
+    {
+        "name": "Voldin Forte B",
+        "price": 703,
+        "category": "Gastroenterology",
+        "description": "High-quality Gastroenterology formulation for clinical use. ID: 999"
+    },
+    {
+        "name": "Atorva Capsule X",
+        "price": 400,
+        "category": "Nephrology",
+        "description": "High-quality Nephrology formulation for clinical use. ID: 1000"
+    }
+]
