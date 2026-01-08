@@ -1,172 +1,124 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Toaster, toast } from 'react-hot-toast';
 import { 
   Beaker, ShoppingCart, Trash2, X, MapPin, Phone, Mail, 
-  Star, Plus, Send, Zap, ShieldCheck, Info, CreditCard, Bitcoin, Truck, CheckCircle, Play
+  Star, Plus, Send, Zap, ShieldCheck, Info, Search, 
+  ChevronRight, Lock, Globe, Menu, PlayCircle
 } from 'lucide-react';
 
 const App = () => {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedMedInfo, setSelectedMedInfo] = useState(null);
-  const [showReviewForm, setShowReviewForm] = useState(false);
-  const [userRating, setUserRating] = useState(5);
-  const [newReview, setNewReview] = useState({ name: '', role: '', text: '' });
-  const [reviews, setReviews] = useState([
-    { id: 1, name: "Dr. Aris Thorne", role: "Hospital Director", text: "The cold-chain integrity for oncology meds is flawless.", rating: 5, verified: true },
-    { id: 2, name: "Sarah Jenkins", role: "Pharma Wholesaler", text: "Nexus is our most reliable partner for bulk exports.", rating: 5, verified: true }
-  ]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedMed, setSelectedMed] = useState(null);
 
-  const products = [
-    { id: '1', name: 'Sorafenib', category: 'Oncology', price: 450, desc: 'Blocks signals that help cancer cells multiply.', stock: 'In Stock', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400' },
-    { id: '2', name: 'Atorvastatin', category: 'Cardiology', price: 120, desc: 'Reduces LDL cholesterol by inhibiting liver enzymes.', stock: 'Low Stock', image: 'https://images.unsplash.com/photo-1471864190281-ad5f9f81ce4c?w=400' },
-    { id: '3', name: 'Amoxicillin', category: 'Antibiotics', price: 85, desc: 'Destroys the cell walls of harmful bacteria.', stock: 'In Stock', image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?w=400' }
+  // --- COMPREHENSIVE MEDICINE LIST ---
+  const medicineDatabase = [
+    { id: 1, name: 'Sorafenib 200mg', cat: 'Oncology', price: 450, stock: 12, desc: 'Targeted therapy for liver and kidney cancer cells.', work: 'Inhibits intracellular and cell surface kinases.' },
+    { id: 2, name: 'Atorvastatin 10mg', cat: 'Cardiology', price: 120, stock: 45, desc: 'Used to lower cholesterol and prevent heart disease.', work: 'Reduces LDL by inhibiting HMG-CoA reductase.' },
+    { id: 3, name: 'Amoxicillin 500mg', cat: 'Antibiotics', price: 85, stock: 100, desc: 'Standard treatment for bacterial infections.', work: 'Inhibits bacterial cell wall synthesis.' },
+    { id: 4, name: 'Enoxaparin 60mg', cat: 'Cardiology', price: 210, stock: 5, desc: 'Anticoagulant used to prevent blood clots.', work: 'Binds to antithrombin III to accelerate neutralization.' },
+    { id: 5, name: 'Erlotinib 150mg', cat: 'Oncology', price: 890, stock: 8, desc: 'Specialized lung cancer treatment.', work: 'Blocks epidermal growth factor receptor (EGFR).' },
+    { id: 6, name: 'Azithromycin 250mg', cat: 'Antibiotics', price: 65, stock: 80, desc: 'Fast-acting antibiotic for respiratory issues.', work: 'Prevents bacteria from producing essential proteins.' }
   ];
 
-  const handleReviewSubmit = (e) => {
-    e.preventDefault();
-    const submittedReview = { id: Date.now(), ...newReview, rating: userRating, verified: true };
-    setReviews([submittedReview, ...reviews]);
-    setShowReviewForm(false);
-    toast.success("Verified review is live!");
-  };
+  // Workable Search Logic
+  const filteredMeds = medicineDatabase.filter(m => 
+    m.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    m.cat.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-  const addToCart = (product) => {
-    setCart([...cart, { ...product, qty: 1 }]);
-    toast.success(`${product.name} added!`, { icon: '🛒' });
+  const addToCart = (p) => {
+    setCart([...cart, { ...p, qty: 1 }]);
+    toast.success(`${p.name} added to secure cart`);
   };
 
   return (
     <Router>
-      <Toaster position="bottom-right" />
-      <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+      <Toaster position="bottom-center" />
+      <div className="min-h-screen bg-white font-sans selection:bg-blue-600 selection:text-white">
         
-        {/* NAV */}
-        <nav className="fixed top-0 w-full z-[100] px-10 py-6 flex justify-between items-center bg-white/10 backdrop-blur-lg border-b border-white/10">
-          <Link to="/" className="text-2xl font-black flex items-center gap-2 text-white">
-            <Beaker className="text-blue-400" /> NEXUS.
-          </Link>
-          <button onClick={() => setIsCartOpen(true)} className="bg-white text-black p-3 rounded-full px-6 flex items-center gap-2 font-black text-xs hover:bg-blue-400 hover:text-white transition-all">
-            CART ({cart.length})
-          </button>
+        {/* --- GLOBAL NAVBAR --- */}
+        <nav className="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-xl border-b border-slate-100 px-6 md:px-12 py-5 flex justify-between items-center">
+          <div className="flex items-center gap-12">
+            <Link to="/" className="text-2xl font-black tracking-tighter text-blue-900 flex items-center gap-2">
+              <Beaker className="text-blue-600" strokeWidth={3} /> NEXUS.
+            </Link>
+            <div className="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-widest text-slate-500">
+              <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+              <Link to="/about" className="hover:text-blue-600 transition-colors">About</Link>
+              <Link to="/products" className="hover:text-blue-600 transition-colors">Products</Link>
+              <Link to="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-6">
+            {/* WORKABLE SEARCH BAR */}
+            <div className="relative hidden sm:block">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+              <input 
+                type="text"
+                placeholder="Search Medicine..."
+                className="pl-10 pr-4 py-2 bg-slate-100 border-none rounded-full text-xs font-bold w-48 focus:w-64 transition-all focus:ring-2 focus:ring-blue-500/20"
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <button onClick={() => setIsCartOpen(true)} className="relative p-2 text-slate-900">
+              <ShoppingCart size={22} />
+              {cart.length > 0 && <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">{cart.length}</span>}
+            </button>
+          </div>
         </nav>
 
-        {/* --- VIDEO HERO SECTION --- */}
-        <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-          {/* Background Video */}
-          <video 
-            autoPlay loop muted playsInline 
-            className="absolute z-0 w-auto min-w-full min-h-full max-w-none opacity-60 grayscale-[0.5]"
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-medical-laboratory-research-and-analysis-40502-large.mp4" type="video/mp4" />
-          </video>
-          
-          {/* Luma Overlay */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-transparent to-white"></div>
+        <Routes>
+          <Route path="/" element={<Home filteredMeds={filteredMeds} addToCart={addToCart} setSelectedMed={setSelectedMed} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products filteredMeds={filteredMeds} addToCart={addToCart} />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            className="relative z-20 text-center px-10"
-          >
-            <span className="text-[10px] font-black tracking-[0.8em] text-blue-400 uppercase mb-6 block">GLOBAL LOGISTICS AUTHORITY</span>
-            <h1 className="text-7xl md:text-[12rem] font-black tracking-tighter uppercase leading-[0.8] mb-8 text-white">
-              PURE<br/><span className="text-blue-400 italic font-thin">SCIENCE.</span>
-            </h1>
-            <div className="flex justify-center gap-4">
-               <a href="#vault" className="px-10 py-5 bg-blue-600 text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all">Enter Vault</a>
-               <button className="p-5 border border-white/30 text-white rounded-full hover:bg-white/10 transition-all"><Play size={14} /></button>
+        {/* --- MEGA FOOTER --- */}
+        <footer className="bg-[#020617] text-white pt-24 pb-12 px-6 md:px-12 rounded-t-[3rem] mt-20">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+            <div className="col-span-1">
+              <h2 className="text-3xl font-black mb-6 italic tracking-tighter">NEXUS.</h2>
+              <p className="text-slate-400 text-xs font-bold uppercase tracking-widest leading-loose">WHO-GMP Certified Pharma Distributor. Trusted by clinics across 50 countries.</p>
             </div>
-          </motion.div>
-        </section>
-
-        {/* VAULT */}
-        <section id="vault" className="py-32 px-10 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl font-black uppercase tracking-tighter mb-20 text-slate-900">The Vault.</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {products.map(p => (
-                <motion.div whileHover={{ y: -10 }} key={p.id} className="bg-slate-50 border border-slate-100 p-10 rounded-[4rem] group">
-                  <div onClick={() => setSelectedMedInfo(p)} className="cursor-pointer overflow-hidden rounded-3xl aspect-square mb-8 relative shadow-2xl">
-                    <img src={p.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={p.name} />
-                  </div>
-                  <h4 className="text-2xl font-black uppercase mb-8">{p.name}</h4>
-                  <div className="flex justify-between items-center">
-                    <span className="text-3xl font-black text-blue-600">${p.price}</span>
-                    <button onClick={() => addToCart(p)} className="bg-slate-900 text-white p-5 rounded-3xl hover:bg-blue-600 transition-all shadow-xl shadow-slate-200"><Plus /></button>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="space-y-4">
+              <h4 className="text-blue-400 text-[10px] font-black uppercase tracking-widest">Connect</h4>
+              <p className="flex items-center gap-2 text-xs font-bold"><MapPin size={14} /> Industrial Area, Mohali, India</p>
+              <p className="flex items-center gap-2 text-xs font-bold"><Phone size={14} /> +91 172 400 0000</p>
+              <p className="flex items-center gap-2 text-xs font-bold"><Mail size={14} /> orders@nexuspharma.com</p>
+            </div>
+            <div className="col-span-1 md:col-span-2 bg-white/5 p-8 rounded-[2rem] border border-white/10 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-6 opacity-20"><ShieldCheck size={100} /></div>
+              <h4 className="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-4 flex items-center gap-2">
+                <Lock size={12} /> Highly Secure Transaction Environment
+              </h4>
+              <p className="text-[11px] text-slate-400 font-medium uppercase tracking-[0.2em] leading-relaxed">We use 256-bit SSL encryption to ensure that your medical history and payment information remain safe with us.</p>
             </div>
           </div>
-        </section>
-
-        {/* FEEDBACK */}
-        <section className="py-32 px-10 bg-slate-900 text-white rounded-t-[5vw]">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-20">
-              <h2 className="text-5xl font-black uppercase tracking-tighter">Clinical Reviews.</h2>
-              <button onClick={() => setShowReviewForm(!showReviewForm)} className="bg-blue-600 px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest">Post Verified Review</button>
-            </div>
-
-            {showReviewForm && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-20 max-w-2xl mx-auto bg-white/5 border border-white/10 p-12 rounded-[3.5rem]">
-                <form onSubmit={handleReviewSubmit} className="space-y-6">
-                  <div className="flex gap-2 justify-center mb-6">
-                    {[1,2,3,4,5].map(s => <Star key={s} size={20} fill={s <= userRating ? "#3B82F6" : "none"} onClick={() => setUserRating(s)} className="cursor-pointer" />)}
-                  </div>
-                  <input required onChange={(e) => setNewReview({...newReview, name: e.target.value})} placeholder="Your Name" className="w-full p-5 bg-white/5 rounded-2xl outline-none text-white font-bold text-xs" />
-                  <textarea required onChange={(e) => setNewReview({...newReview, text: e.target.value})} placeholder="Experience..." className="w-full p-5 bg-white/5 rounded-2xl outline-none text-white font-bold text-xs h-32" />
-                  <button type="submit" className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest text-[10px]">Submit</button>
-                </form>
-              </motion.div>
-            )}
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {reviews.map(rev => (
-                <div key={rev.id} className="p-12 bg-white/5 border border-white/10 rounded-[4rem]">
-                  <div className="flex gap-1 mb-8">
-                    {[...Array(5)].map((_, i) => <Star key={i} size={12} fill={i < rev.rating ? "#3B82F6" : "none"} color="#3B82F6" />)}
-                  </div>
-                  <p className="text-slate-400 text-xl font-medium italic mb-10 leading-relaxed">"{rev.text}"</p>
-                  <h4 className="text-[12px] font-black uppercase text-white flex items-center gap-2">{rev.name} <CheckCircle size={14} className="text-blue-500" /></h4>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FOOTER */}
-        <footer className="bg-white pt-32 pb-12 px-10 border-t">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
-            <div>
-              <h2 className="text-4xl font-black uppercase tracking-tighter mb-8">NEXUS.</h2>
-              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest space-y-4">
-                <p className="flex items-center gap-2"><MapPin size={16} /> Phase-7, Mohali, India</p>
-                <p className="flex items-center gap-2"><Phone size={16} /> +91 172 400 0000</p>
-              </div>
-            </div>
-            <div className="col-span-2 bg-slate-900 text-white p-12 rounded-[4rem]">
-              <ShieldCheck className="text-blue-400 mb-6" size={40} />
-              <h4 className="text-xs font-black uppercase mb-4 tracking-widest">Safe Data Guarantee</h4>
-              <p className="text-[11px] text-slate-400 font-medium uppercase tracking-[0.2em] leading-loose">
-                Your medical and transactional data is protected by AES-256 encryption. Your information is safe with us.
-              </p>
-            </div>
+          <div className="pt-10 border-t border-white/5 text-center text-[10px] font-black text-slate-500 uppercase tracking-widest">
+            © 2026 NEXUS PHARMA PVT LTD • GOVERNMENT REGISTERED
           </div>
         </footer>
 
-        {/* PRODUCT INFO MODAL */}
+        {/* --- PRODUCT QUICK VIEW MODAL --- */}
         <AnimatePresence>
-          {selectedMedInfo && (
-            <div className="fixed inset-0 z-[300] bg-black/80 backdrop-blur-xl flex items-center justify-center p-6">
-              <motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} className="bg-white p-12 rounded-[4rem] max-w-md relative">
-                <X className="absolute top-8 right-8 cursor-pointer" onClick={() => setSelectedMedInfo(null)} />
-                <h3 className="text-3xl font-black uppercase mb-6">{selectedMedInfo.name}</h3>
-                <p className="text-slate-500 mb-8 font-medium leading-relaxed">{selectedMedInfo.desc}</p>
-                <button onClick={() => {addToCart(selectedMedInfo); setSelectedMedInfo(null);}} className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black uppercase text-[11px]">Add To Cart</button>
+          {selectedMed && (
+            <div className="fixed inset-0 z-[500] bg-black/80 backdrop-blur-xl flex items-center justify-center p-6">
+              <motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} className="bg-white p-10 rounded-[3rem] max-w-md w-full relative">
+                <button onClick={() => setSelectedMed(null)} className="absolute top-6 right-6 text-slate-300 hover:text-slate-900"><X /></button>
+                <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6"><Info /></div>
+                <h3 className="text-2xl font-black uppercase mb-2">{selectedMed.name}</h3>
+                <p className="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-6">{selectedMed.cat}</p>
+                <div className="bg-slate-50 p-6 rounded-2xl mb-8">
+                  <p className="text-[11px] font-bold text-slate-600 uppercase mb-2">Mechanism of Action:</p>
+                  <p className="text-xs text-slate-500 leading-relaxed font-medium">{selectedMed.work}</p>
+                </div>
+                <button onClick={() => {addToCart(selectedMed); setSelectedMed(null);}} className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest text-[11px]">Add to Secure Order</button>
               </motion.div>
             </div>
           )}
@@ -175,5 +127,95 @@ const App = () => {
     </Router>
   );
 };
+
+// --- HOME PAGE COMPONENT ---
+const Home = ({ filteredMeds, addToCart, setSelectedMed }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      {/* CINEMATIC VIDEO HERO */}
+      <section className="relative h-[90vh] bg-slate-900 flex items-center justify-center overflow-hidden">
+        <video 
+          id="heroVideo"
+          autoPlay loop muted playsInline 
+          className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale-[0.3]"
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-scientists-working-in-a-lab-41372-large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 to-white/10"></div>
+        
+        <div className="relative z-10 text-center text-white px-6">
+          <span className="text-[10px] font-black tracking-[1em] uppercase mb-8 block text-blue-400">Pure Science Authority</span>
+          <h1 className="text-7xl md:text-[10rem] font-black tracking-tighter uppercase leading-[0.8] mb-12 drop-shadow-2xl">
+            LIFESPAN<br/><span className="text-blue-400 italic font-thin">NEXUS.</span>
+          </h1>
+          <div className="flex flex-col md:flex-row justify-center gap-6 items-center">
+            <a href="#vault" className="px-12 py-5 bg-blue-600 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white hover:text-blue-900 transition-all">Explore Vault</a>
+            {/* FIXED PLAY BUTTON */}
+            <button 
+              onClick={() => {
+                const v = document.getElementById('heroVideo');
+                v.paused ? v.play() : v.pause();
+                setIsPlaying(!isPlaying);
+              }}
+              className="flex items-center gap-3 font-black text-[11px] uppercase tracking-widest hover:text-blue-400"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center">
+                <PlayCircle fill={isPlaying ? "white" : "none"} size={20} />
+              </div>
+              {isPlaying ? "Pause Clinical Reel" : "Watch Clinical Reel"}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* SEARCH RESULTS / PRODUCT VAULT */}
+      <section id="vault" className="py-32 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-end mb-16">
+            <h2 className="text-5xl font-black uppercase tracking-tighter">Inventory.</h2>
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest border-b-2 border-blue-600 pb-2">Verified Pharmaceuticals</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {filteredMeds.map(m => (
+              <div key={m.id} className="p-10 border border-slate-100 rounded-[3rem] bg-slate-50 group hover:bg-white hover:shadow-2xl transition-all">
+                <div onClick={() => setSelectedMed(m)} className="cursor-pointer aspect-square bg-slate-200 rounded-3xl mb-8 overflow-hidden relative">
+                   <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <Zap className="text-blue-600" />
+                   </div>
+                   <div className="absolute top-4 left-4 bg-white text-[8px] font-black px-3 py-1 rounded-full uppercase">{m.stock} Units Left</div>
+                </div>
+                <h4 className="text-2xl font-black uppercase mb-2">{m.name}</h4>
+                <p className="text-[10px] font-black text-blue-600 uppercase tracking-[0.2em] mb-8">{m.cat}</p>
+                <div className="flex justify-between items-center border-t pt-6">
+                  <span className="text-3xl font-black text-slate-900">${m.price}</span>
+                  <button onClick={() => addToCart(m)} className="bg-blue-600 text-white p-4 rounded-2xl shadow-lg shadow-blue-200 hover:scale-105 active:scale-90 transition-all"><Plus /></button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </motion.div>
+  );
+};
+
+// --- SIMPLE PAGE PLACEHOLDERS ---
+const About = () => <div className="pt-40 px-12 text-center h-screen">
+  <h1 className="text-7xl font-black uppercase tracking-tighter">About Our Ethics.</h1>
+  <p className="max-w-2xl mx-auto mt-12 text-slate-500 font-medium">Nexus Pharma has been a leader in cold-chain logistics and medical distribution since 2012. Our mission is to democratize access to critical oncology and heart care medications across the globe with transparent pricing and clinical-grade security.</p>
+</div>;
+
+const Products = ({ filteredMeds, addToCart }) => <div className="pt-40 px-12 pb-20"><Home filteredMeds={filteredMeds} addToCart={addToCart} setSelectedMed={() => {}} /></div>;
+
+const Contact = () => <div className="pt-40 px-12 h-screen max-w-2xl mx-auto text-center">
+  <h1 className="text-7xl font-black uppercase tracking-tighter mb-12">Contact HQ.</h1>
+  <div className="space-y-6 text-left bg-slate-50 p-12 rounded-[3rem]">
+    <div className="flex gap-4 items-center font-bold uppercase text-xs tracking-widest"><Mail className="text-blue-600" /> support@nexuspharma.com</div>
+    <div className="flex gap-4 items-center font-bold uppercase text-xs tracking-widest"><Phone className="text-blue-600" /> +91-172-400-0000</div>
+    <div className="flex gap-4 items-center font-bold uppercase text-xs tracking-widest"><MapPin className="text-blue-600" /> Phase-7, Industrial Area, Mohali</div>
+  </div>
+</div>;
 
 export default App;
