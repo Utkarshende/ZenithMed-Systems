@@ -50,12 +50,23 @@ const App = () => {
     return () => window.removeEventListener('mousemove', handleMove);
   }, []);
 
-  const fetchProducts = async () => {
-    try {
-      const { data } = await axios.get(`${API_URL}/api/products`);
+const fetchProducts = async () => {
+  try {
+    const { data } = await axios.get(`${API_URL}/api/products`);
+    
+    // Check if data is the array itself, or if it's inside an object property
+    if (Array.isArray(data)) {
       setProducts(data);
-    } catch (err) { console.error(err); }
-  };
+    } else if (data.products && Array.isArray(data.products)) {
+      setProducts(data.products);
+    } else {
+      setProducts([]); // Fallback to empty array to prevent crash
+    }
+  } catch (err) { 
+    console.error("Fetch error:", err);
+    setProducts([]); // Prevent crash on network error
+  }
+};
 
   const filteredProducts = products.filter(p => {
     const matchesCategory = activeCategory === 'All' || p.category === activeCategory;
