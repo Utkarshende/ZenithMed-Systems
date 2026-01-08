@@ -1,246 +1,278 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Toaster } from 'react-hot-toast';
+import { Toaster, toast } from 'react-hot-toast';
 import axios from 'axios';
 import { 
-  Pill, Search, LogOut, LayoutDashboard, 
-  MapPin, Star, ArrowUpRight, Menu, Beaker, Globe, Shield, Zap, Quote, X, CheckCircle, Phone, Mail, Send, Award, Activity
+  Beaker, Search, ShoppingCart, ShieldCheck, CreditCard, 
+  Trash2, ChevronRight, QrCode, Lock, Truck, X, CheckCircle2 
 } from 'lucide-react';
 
-// Pages
-import AdminDashboard from './pages/AdminDashboard';
-import Login from './pages/Login';
-import Contact from './pages/Contact';
-import PriceModal from './components/PriceModal';
-import toast from 'react-hot-toast';
-
+// Logic for API - Replace with your actual backend URL
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const App = () => {
   const [products, setProducts] = useState([]);
-  const [reviews, setReviews] = useState([
-    { id: 1, name: "Dr. Julian Voss", role: "Berlin Health", text: "Global logistics at its finest.", rating: 5 },
-    { id: 2, name: "Maria Garcia", role: "Madrid Pharma", text: "Consistent quality and documentation.", rating: 5 }
-  ]);
+  const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showReviewModal, setShowReviewModal] = useState(false);
+  const [checkoutStep, setCheckoutStep] = useState(1); // 1: Cart, 2: Details, 3: Payment, 4: Success
+
+  // Categories & Sub-categories
+  const categories = [
+    { id: 'All', label: 'All Medicines' },
+    { id: 'Oncology', label: 'Cancer Care', subs: ['Chemotherapy', 'Targeted Therapy'] },
+    { id: 'Cardiology', label: 'Heart', subs: ['Beta Blockers', 'Statins'] },
+    { id: 'Antibiotics', label: 'Infections', subs: ['Antivirals', 'Antifungals'] },
+    { id: 'Critical', label: 'Critical Care', subs: ['ICU Meds', 'Emergency'] },
+  ];
 
   useEffect(() => {
-    const adminStatus = localStorage.getItem('isAdmin') === 'true';
-    setIsAdmin(adminStatus);
     fetchProducts();
   }, []);
 
   const fetchProducts = async () => {
     try {
       const { data } = await axios.get(`${API_URL}/api/products`);
-      setProducts(Array.isArray(data) ? data : (data.products || []));
+      // Fallback for demo if API fails
+      const demoData = [
+        { _id: '1', name: 'Sorafenib 200mg', category: 'Oncology', price: 450, composition: 'Anti-cancer', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=400' },
+        { _id: '2', name: 'Atorvastatin 10mg', category: 'Cardiology', price: 120, composition: 'Cholesterol control', image: 'https://images.unsplash.com/photo-1471864190281-ad5f9f81ce4c?auto=format&fit=crop&q=80&w=400' }
+      ];
+      setProducts(data.length > 0 ? data : demoData);
     } catch (err) { setProducts([]); }
   };
 
-  const filteredProducts = products.filter(p => {
-    const matchesCategory = activeCategory === 'All' || p.category === activeCategory;
-    return matchesCategory && p.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
+  // --- CART LOGIC ---
+  const addToCart = (product) => {
+    setCart((prev) => {
+      const exists = prev.find(item => item._id === product._id);
+      if (exists) return prev.map(item => item._id === product._id ? {...item, qty: item.qty + 1} : item);
+      return [...prev, {...product, qty: 1}];
+    });
+    toast.success(`${product.name} added to cart`);
+  };
+
+  const removeFromCart = (id) => setCart(cart.filter(item => item._id !== id));
+  const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+  const filteredProducts = products.filter(p => 
+    (activeCategory === 'All' || p.category === activeCategory) &&
+    p.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <Router>
       <Toaster position="bottom-right" />
-      <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden">
+      <div className="min-h-screen bg-white text-slate-900">
         
         {/* --- NAVIGATION --- */}
-        <nav className="fixed top-0 w-full z-[100] px-10 py-6 flex justify-between items-center bg-white/80 backdrop-blur-xl border-b border-slate-100 font-bold text-[10px] uppercase tracking-widest">
+        <nav className="fixed top-0 w-full z-[100] px-6 py-4 bg-white/80 backdrop-blur-md border-b flex justify-between items-center">
           <Link to="/" className="text-xl font-black tracking-tighter flex items-center gap-2">
-            <Beaker className="text-blue-600" size={22} /> NEXUS.
+            <Beaker className="text-blue-600" /> NEXUS PHARMA
           </Link>
-          <div className="flex gap-8 items-center">
-            <a href="#about" className="hover:text-blue-600">About</a>
-            <a href="#vault" className="hover:text-blue-600">Vault</a>
-            <a href="#contact" className="hover:text-blue-600">Inquiry</a>
-            {isAdmin ? <Link to="/admin" className="text-blue-600">Admin</Link> : <Link to="/login">Login</Link>}
-            <Menu size={18} />
+          <div className="flex items-center gap-6">
+            <button onClick={() => setIsCartOpen(true)} className="relative p-2">
+              <ShoppingCart size={22} />
+              {cart.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                  {cart.length}
+                </span>
+              )}
+            </button>
           </div>
         </nav>
 
-        <Routes>
-          <Route path="/" element={
-            <main>
-              {/* --- HERO --- */}
-              <section className="h-[80vh] flex flex-col justify-center items-center text-center px-10">
-                <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-6">
-                  NEXUS<br/><span className="text-blue-600 italic">PHARMA.</span>
-                </h1>
-                <p className="max-w-md text-slate-400 font-medium text-[10px] uppercase tracking-[0.4em]">Global Health Solutions & Clinical Logistics</p>
-              </section>
+        {/* --- MAIN PAGE --- */}
+        <div className="pt-24 px-6 max-w-7xl mx-auto">
+          {/* SEARCH & CATEGORY BAR */}
+          <div className="flex flex-col md:flex-row gap-4 mb-12">
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+              <input 
+                type="text" 
+                placeholder="Search for medicines or salt composition..."
+                className="w-full pl-12 pr-4 py-4 bg-slate-50 border rounded-2xl outline-none focus:ring-2 focus:ring-blue-600/20"
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <div className="flex gap-2 overflow-x-auto no-scrollbar">
+              {categories.map(cat => (
+                <button 
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-6 py-4 rounded-2xl text-xs font-bold uppercase tracking-widest transition-all whitespace-nowrap ${activeCategory === cat.id ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
-              {/* --- 1. ABOUT SECTION --- */}
-              <section id="about" className="py-32 px-10 bg-slate-50 border-y border-slate-100">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-                  <div>
-                    <h2 className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-6">Who We Are</h2>
-                    <h3 className="text-5xl font-black tracking-tighter uppercase mb-8">Architects of<br/>Modern Medicine.</h3>
-                    <p className="text-slate-600 leading-relaxed mb-6 font-medium">
-                      Nexus Pharma is a premier WHO-GMP certified pharmaceutical export house specializing in high-potency formulations, oncology treatments, and critical care medicine. Since 2012, we have bridged the gap between advanced manufacturing and global accessibility.
-                    </p>
-                    <p className="text-slate-500 text-sm leading-relaxed italic">
-                      "Our mission is to ensure that geography never limits a patient's access to life-saving science."
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 flex flex-col items-center text-center">
-                       <Award className="text-blue-600 mb-4" />
-                       <h4 className="text-[10px] font-black uppercase">Certified</h4>
-                    </div>
-                    <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 mt-10 flex flex-col items-center text-center">
-                       <Globe className="text-blue-600 mb-4" />
-                       <h4 className="text-[10px] font-black uppercase">Global</h4>
-                    </div>
-                  </div>
+          {/* PRODUCT GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-24">
+            {filteredProducts.map(p => (
+              <motion.div key={p._id} layout className="border rounded-[2rem] p-6 hover:shadow-xl transition-all group">
+                <div className="aspect-square rounded-2xl bg-slate-100 mb-6 overflow-hidden">
+                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
                 </div>
-              </section>
-
-              {/* --- 2. PRODUCTS & SERVICES --- */}
-              <section className="py-32 px-10 bg-white">
-                <div className="max-w-7xl mx-auto">
-                  <h2 className="text-xs font-black text-blue-600 uppercase tracking-[0.4em] mb-16 text-center">Services & Expertise</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="p-10 border border-slate-100 rounded-[3rem] hover:bg-slate-50 transition-all">
-                      <Activity className="text-blue-600 mb-6" />
-                      <h4 className="text-xl font-black uppercase mb-4">Oncology Care</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">Specialized distribution of anti-cancer treatments with complete temperature-controlled handling.</p>
-                    </div>
-                    <div className="p-10 border border-slate-100 rounded-[3rem] hover:bg-slate-50 transition-all">
-                      <Shield className="text-blue-600 mb-6" />
-                      <h4 className="text-xl font-black uppercase mb-4">Bulk Sourcing</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">Strategic procurement for hospital groups and government contracts worldwide.</p>
-                    </div>
-                    <div className="p-10 border border-slate-100 rounded-[3rem] hover:bg-slate-50 transition-all">
-                      <Zap className="text-blue-600 mb-6" />
-                      <h4 className="text-xl font-black uppercase mb-4">Cold Chain</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">End-to-end medical logistics ensuring potency remains intact from factory to pharmacy.</p>
-                    </div>
-                  </div>
+                <h3 className="text-lg font-black uppercase truncate">{p.name}</h3>
+                <p className="text-slate-400 text-[10px] font-bold mb-4 uppercase">{p.composition}</p>
+                <div className="flex justify-between items-center mt-auto">
+                  <span className="text-xl font-black text-blue-600">${p.price}</span>
+                  <button 
+                    onClick={() => addToCart(p)}
+                    className="bg-slate-900 text-white p-3 rounded-xl hover:bg-blue-600 transition-colors"
+                  >
+                    <ShoppingCart size={18} />
+                  </button>
                 </div>
-              </section>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
-              {/* --- 3. VAULT (MEDICINE LIST) --- */}
-              <section id="vault" className="py-32 px-10 bg-[#0F172A] rounded-t-[5vw] text-white">
-                <div className="max-w-7xl mx-auto">
-                  <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                    <h2 className="text-6xl font-black tracking-tighter uppercase">Vault.</h2>
-                    <div className="relative w-full max-w-sm">
-                       <Search className="absolute left-0 top-4 text-white/30" size={20} />
-                       <input 
-                        type="text" 
-                        placeholder="Search Salts..."
-                        className="w-full bg-transparent border-b border-white/20 py-4 pl-10 outline-none focus:border-blue-500 transition-all text-xl"
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                       />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {filteredProducts.map(p => (
-                      <div key={p._id} className="bg-white/5 border border-white/5 rounded-[2.5rem] p-10">
-                        <h3 className="text-2xl font-black uppercase mb-6 leading-none">{p.name}</h3>
-                        <p className="text-white/40 text-[11px] font-medium leading-relaxed italic mb-8 h-12 line-clamp-2">{p.composition}</p>
-                        <button onClick={() => setSelectedProduct(p)} className="w-full py-4 bg-white text-slate-900 rounded-2xl font-black uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:text-white transition-all">Request Quote</button>
+        {/* --- SIDE CART & CHECKOUT OVERLAY --- */}
+        <AnimatePresence>
+          {isCartOpen && (
+            <motion.div 
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[200] bg-black/40 backdrop-blur-sm flex justify-end"
+            >
+              <motion.div 
+                initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
+                className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col p-8"
+              >
+                <div className="flex justify-between items-center mb-8">
+                  <h2 className="text-2xl font-black uppercase tracking-tighter">Your Order</h2>
+                  <X className="cursor-pointer" onClick={() => {setIsCartOpen(false); setCheckoutStep(1);}} />
+                </div>
+
+                {/* STEPS INDICATOR */}
+                <div className="flex gap-2 mb-8">
+                  {[1, 2, 3].map(step => (
+                    <div key={step} className={`h-1 flex-1 rounded-full ${checkoutStep >= step ? 'bg-blue-600' : 'bg-slate-100'}`} />
+                  ))}
+                </div>
+
+                {/* STEP 1: CART ITEMS */}
+                {checkoutStep === 1 && (
+                  <div className="flex-1 overflow-y-auto space-y-4">
+                    {cart.map(item => (
+                      <div key={item._id} className="flex gap-4 items-center bg-slate-50 p-4 rounded-2xl">
+                        <img src={item.image} className="w-16 h-16 rounded-xl object-cover" />
+                        <div className="flex-1">
+                          <h4 className="font-bold text-sm uppercase">{item.name}</h4>
+                          <p className="text-blue-600 font-black text-sm">${item.price} x {item.qty}</p>
+                        </div>
+                        <Trash2 className="text-red-400 cursor-pointer" size={18} onClick={() => removeFromCart(item._id)} />
                       </div>
                     ))}
+                    {cart.length === 0 && <p className="text-center text-slate-400 py-20 font-bold uppercase text-xs">Cart is empty</p>}
                   </div>
-                </div>
-              </section>
+                )}
 
-              {/* --- 4. MESSAGE BOX / INQUIRY --- */}
-              <section id="contact" className="py-32 px-10 bg-white">
-                <div className="max-w-4xl mx-auto bg-slate-900 rounded-[4rem] p-16 text-white text-center">
-                  <h2 className="text-4xl font-black tracking-tighter uppercase mb-6">Looking for a specific salt?</h2>
-                  <p className="text-white/40 mb-10 uppercase tracking-widest text-[10px]">Tell us what you need, and our experts will source it for you.</p>
-                  <form className="flex flex-col md:flex-row gap-4">
-                    <input type="text" placeholder="I am looking for..." className="flex-1 bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-blue-500" />
-                    <button className="bg-blue-600 px-10 py-5 rounded-2xl font-black uppercase text-[10px] flex items-center justify-center gap-3">
-                      Send Request <Send size={14} />
+                {/* STEP 2: CUSTOMER DETAILS */}
+                {checkoutStep === 2 && (
+                  <div className="flex-1 space-y-4">
+                    <div className="bg-emerald-50 p-4 rounded-2xl flex items-center gap-3 mb-6">
+                      <ShieldCheck className="text-emerald-600" />
+                      <p className="text-[10px] font-bold text-emerald-800 uppercase tracking-widest">Your information is safe with us. End-to-end encrypted.</p>
+                    </div>
+                    <input type="text" placeholder="Receiver's Full Name" className="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-blue-600/20" />
+                    <input type="text" placeholder="Delivery Address" className="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-blue-600/20" />
+                    <input type="tel" placeholder="Phone Number" className="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-blue-600/20" />
+                    <div className="p-4 border-2 border-dashed rounded-2xl text-center">
+                      <p className="text-[10px] font-black uppercase text-slate-400 mb-2">Delivery Method</p>
+                      <div className="flex gap-2">
+                        <button className="flex-1 py-3 bg-blue-600 text-white rounded-xl text-[10px] font-bold uppercase">Standard</button>
+                        <button className="flex-1 py-3 bg-slate-100 text-slate-500 rounded-xl text-[10px] font-bold uppercase">Express</button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* STEP 3: PAYMENT (QR & OPTIONS) */}
+                {checkoutStep === 3 && (
+                  <div className="flex-1 flex flex-col items-center justify-center text-center">
+                    <h3 className="font-black uppercase mb-6">Choose Payment Method</h3>
+                    <div className="grid grid-cols-2 gap-4 w-full mb-8">
+                      <button className="p-4 border-2 border-blue-600 rounded-2xl flex flex-col items-center gap-2">
+                        <QrCode className="text-blue-600" />
+                        <span className="text-[10px] font-bold uppercase">Pay Online</span>
+                      </button>
+                      <button className="p-4 border-2 border-slate-100 rounded-2xl flex flex-col items-center gap-2">
+                        <Truck className="text-slate-400" />
+                        <span className="text-[10px] font-bold uppercase">Cash on Delivery</span>
+                      </button>
+                    </div>
+                    <div className="bg-slate-50 p-6 rounded-[2rem] w-full">
+                      <p className="text-[9px] font-black uppercase text-slate-400 mb-4 tracking-widest">Scan QR to pay via UPI/Bank</p>
+                      <div className="w-40 h-40 bg-white mx-auto mb-4 border-4 border-white shadow-xl flex items-center justify-center">
+                        <QrCode size={120} className="text-slate-900" />
+                      </div>
+                      <p className="font-black text-xl text-blue-600">${cartTotal}</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* SUCCESS STEP */}
+                {checkoutStep === 4 && (
+                  <div className="flex-1 flex flex-col items-center justify-center text-center">
+                    <CheckCircle2 size={80} className="text-emerald-500 mb-6" />
+                    <h2 className="text-3xl font-black uppercase tracking-tighter mb-4">Order Placed!</h2>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-8 uppercase tracking-widest text-[10px]">Your medicine is being packed and will be shipped within 24 hours.</p>
+                    <button onClick={() => {setIsCartOpen(false); setCheckoutStep(1); setCart([]);}} className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest">Done</button>
+                  </div>
+                )}
+
+                {/* FOOTER ACTIONS */}
+                {checkoutStep < 4 && (
+                  <div className="pt-6 border-t mt-auto">
+                    <div className="flex justify-between mb-6">
+                      <span className="font-bold text-slate-400 uppercase text-xs">Total Amount</span>
+                      <span className="font-black text-xl text-blue-600">${cartTotal}</span>
+                    </div>
+                    <button 
+                      onClick={() => setCheckoutStep(prev => prev + 1)}
+                      disabled={cart.length === 0}
+                      className="w-full py-5 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-blue-700 transition-all disabled:opacity-50"
+                    >
+                      {checkoutStep === 1 ? 'Checkout Now' : checkoutStep === 2 ? 'Continue to Payment' : 'Confirm Order'}
+                      <ChevronRight size={18} />
                     </button>
-                  </form>
-                </div>
-              </section>
-
-              {/* --- 5. RATINGS & REVIEWS --- */}
-              <section className="py-32 px-10 bg-slate-50">
-                <div className="max-w-7xl mx-auto">
-                  <h2 className="text-5xl font-black tracking-tighter uppercase mb-16 text-center">Global Partner Feedback.</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    {reviews.map(rev => (
-                      <div key={rev.id} className="p-10 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm">
-                        <div className="flex gap-1 mb-6 text-blue-600">
-                          <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" />
-                        </div>
-                        <p className="text-slate-600 font-medium italic mb-8 leading-relaxed">"{rev.text}"</p>
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-black text-xs">{rev.name[0]}</div>
-                          <div>
-                            <h4 className="text-[11px] font-black uppercase">{rev.name}</h4>
-                            <p className="text-[9px] text-slate-400 font-bold uppercase">{rev.role}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
                   </div>
-                </div>
-              </section>
-            </main>
-          } />
+                )}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-          <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-        </Routes>
-
-        {/* --- 6. HIGH-END FOOTER --- */}
-        <footer className="bg-white py-32 px-10 border-t border-slate-100">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-start mb-20">
-              <div>
-                <h2 className="text-4xl font-black tracking-tighter uppercase mb-8">Nexus.</h2>
-                <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-slate-400 leading-relaxed">
-                   <p className="flex items-center gap-3"><MapPin size={14} className="text-blue-600" /> Phase 7, Industrial Area, Mohali, Punjab, IN</p>
-                   <p className="flex items-center gap-3"><Phone size={14} className="text-blue-600" /> +91 172 400 0000</p>
-                   <p className="flex items-center gap-3"><Mail size={14} className="text-blue-600" /> hello@nexuspharma.com</p>
-                </div>
-              </div>
-              <div className="col-span-2 grid grid-cols-2 md:grid-cols-3 gap-10">
-                <div className="space-y-4">
-                  <h4 className="text-[10px] font-black uppercase text-blue-600 tracking-widest">Navigation</h4>
-                  <ul className="text-[10px] font-bold uppercase space-y-2 text-slate-500">
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#vault">Product Vault</a></li>
-                    <li><a href="#contact">Inquire</a></li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-[10px] font-black uppercase text-blue-600 tracking-widest">Compliance</h4>
-                  <ul className="text-[10px] font-bold uppercase space-y-2 text-slate-500">
-                    <li>WHO-GMP</li>
-                    <li>ISO 9001:2015</li>
-                    <li>CDSCO Certified</li>
-                  </ul>
-                </div>
+        {/* --- HIGH END FOOTER --- */}
+        <footer className="bg-slate-50 py-24 px-6 border-t mt-40">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+              <h2 className="text-2xl font-black tracking-tighter mb-6 flex items-center gap-2">
+                <Beaker className="text-blue-600" /> NEXUS.
+              </h2>
+              <div className="space-y-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                <p className="flex items-center gap-3"><MapPin size={14} /> Mohali Industrial Area, Punjab, India</p>
+                <p className="flex items-center gap-3"><Lock size={14} /> SSL Secured & Encrypted Payments</p>
               </div>
             </div>
-            <div className="pt-10 border-t border-slate-100 flex justify-between items-center text-[9px] font-black uppercase tracking-[0.4em] text-slate-300">
-              <p>© 2026 NEXUS PHARMA PVT LTD</p>
-              <div className="flex gap-8">
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-              </div>
+            <div className="flex flex-col gap-4">
+              <h4 className="text-[10px] font-black uppercase tracking-widest text-blue-600">Company</h4>
+              <Link to="/about" className="text-xs font-bold uppercase hover:text-blue-600">Our Heritage</Link>
+              <Link to="/compliance" className="text-xs font-bold uppercase hover:text-blue-600">WHO-GMP Guidelines</Link>
+            </div>
+            <div className="bg-white p-8 rounded-3xl border flex flex-col items-center text-center">
+              <ShieldCheck className="text-blue-600 mb-4" />
+              <h4 className="text-[10px] font-black uppercase mb-2">Data Privacy</h4>
+              <p className="text-[9px] text-slate-400 leading-relaxed uppercase tracking-widest">We never share your medical history. Your data is strictly used for order delivery.</p>
             </div>
           </div>
         </footer>
-
-        {selectedProduct && <PriceModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
       </div>
     </Router>
   );
