@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
-import { motion, AnimatePresence, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { 
-  Pill, Search, LogIn, LogOut, LayoutDashboard, 
-  MapPin, Star, ArrowUpRight, Plus, Menu 
+  Pill, Search, LogOut, LayoutDashboard, 
+  MapPin, Star, ArrowUpRight, Menu, Globe, Beaker 
 } from 'lucide-react';
 
 // Pages
@@ -16,7 +16,6 @@ import PriceModal from './components/PriceModal';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
-// UX: Smooth scroll and perspective helper
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [pathname]);
@@ -31,6 +30,10 @@ const App = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
+  const { scrollYProgress } = useScroll();
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+
   const categories = [
     { id: 'All', label: 'Vault', icon: '💎' },
     { id: 'Oncology', label: 'Oncology', icon: '🎗️' },
@@ -40,7 +43,6 @@ const App = () => {
     { id: 'Gastroenterology', label: 'Gastro', icon: '🍏' },
   ];
 
-  // Custom Cursor Logic
   useEffect(() => {
     const handleMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', handleMove);
@@ -50,23 +52,21 @@ const App = () => {
     return () => window.removeEventListener('mousemove', handleMove);
   }, []);
 
-const fetchProducts = async () => {
-  try {
-    const { data } = await axios.get(`${API_URL}/api/products`);
-    
-    // Check if data is the array itself, or if it's inside an object property
-    if (Array.isArray(data)) {
-      setProducts(data);
-    } else if (data.products && Array.isArray(data.products)) {
-      setProducts(data.products);
-    } else {
-      setProducts([]); // Fallback to empty array to prevent crash
+  const fetchProducts = async () => {
+    try {
+      const { data } = await axios.get(`${API_URL}/api/products`);
+      const validatedData = Array.isArray(data) ? data : (data.products || []);
+      setProducts(validatedData);
+    } catch (err) { setProducts([]); }
+  };
+
+  const changeLanguage = (langCode) => {
+    const selectField = document.querySelector('.goog-te-combo');
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
     }
-  } catch (err) { 
-    console.error("Fetch error:", err);
-    setProducts([]); // Prevent crash on network error
-  }
-};
+  };
 
   const filteredProducts = products.filter(p => {
     const matchesCategory = activeCategory === 'All' || p.category === activeCategory;
@@ -79,103 +79,147 @@ const fetchProducts = async () => {
       <ScrollToTop />
       <Toaster position="bottom-right" />
       
-      {/* 1. AWWARDS CUSTOM CURSOR */}
+      {/* CUSTOM CURSOR */}
       <motion.div 
-        className="fixed top-0 left-0 w-8 h-8 border border-blue-600 rounded-full pointer-events-none z-[9999] hidden md:block"
-        animate={{ x: mousePos.x - 16, y: mousePos.y - 16 }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        className="fixed top-0 left-0 w-6 h-6 border-2 border-blue-600 rounded-full pointer-events-none z-[9999] hidden md:block"
+        animate={{ x: mousePos.x - 12, y: mousePos.y - 12 }}
+        transition={{ type: 'spring', damping: 30, stiffness: 250 }}
       />
 
-      <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+      <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white overflow-x-hidden">
         
-        {/* --- MINIMAL NAV --- */}
-        <nav className="fixed top-0 w-full z-[100] px-10 py-8 flex justify-between items-center mix-blend-difference text-white">
-          <Link to="/" className="text-2xl font-black tracking-tighter uppercase">Nexus.</Link>
-          <div className="flex gap-10 items-center font-bold text-xs uppercase tracking-widest">
-            <Link to="/contact" className="hover:line-through transition-all">Inquiry</Link>
-            {isAdmin ? (
-              <button onClick={() => { localStorage.clear(); window.location.reload(); }} className="hover:line-through">Logout</button>
-            ) : (
-              <Link to="/login" className="hover:line-through">Access</Link>
-            )}
-            <Menu size={20} className="cursor-pointer" />
+        {/* --- LUXURY NAV --- */}
+        <nav className="fixed top-0 w-full z-[100] px-10 py-6 flex justify-between items-center bg-white/10 backdrop-blur-md border-b border-slate-100">
+          <Link to="/" className="text-xl font-black tracking-tighter uppercase flex items-center gap-2">
+            <Beaker className="text-blue-600" size={20} /> Nexus.
+          </Link>
+          
+          <div className="flex gap-8 items-center font-bold text-[9px] uppercase tracking-[0.25em]">
+            <div id="google_translate_element" className="hidden"></div>
+            <div className="relative group cursor-pointer flex items-center gap-2 hover:text-blue-600 transition-colors">
+              <Globe size={12} /> Language
+              <div className="absolute right-0 top-full mt-4 bg-white p-5 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-slate-50 w-36">
+                <div className="flex flex-col gap-3 text-slate-900">
+                  <button onClick={() => changeLanguage('en')} className="text-left hover:text-blue-600">English</button>
+                  <button onClick={() => changeLanguage('es')} className="text-left hover:text-blue-600">Español</button>
+                  <button onClick={() => changeLanguage('fr')} className="text-left hover:text-blue-600">Français</button>
+                </div>
+              </div>
+            </div>
+            <Link to="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+            {isAdmin ? <Link to="/admin" className="text-blue-600">Dashboard</Link> : <Link to="/login">Access</Link>}
+            <Menu size={18} className="cursor-pointer" />
           </div>
         </nav>
 
         <Routes>
           <Route path="/" element={
             <main>
-              {/* --- 2. THE HERO (Editorial Style) --- */}
-              <section className="h-screen flex flex-col justify-center items-center relative overflow-hidden px-10">
-                <motion.div 
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-center z-10"
-                >
-                  <h1 className="text-[15vw] font-black leading-[0.8] tracking-tighter uppercase mb-4">
-                    Pure<br/><span className="text-blue-600 italic">Science.</span>
-                  </h1>
-                  <p className="max-w-md mx-auto text-slate-500 font-medium text-lg">
-                    Global pharmaceutical distribution with clinical-grade precision.
-                  </p>
-                </motion.div>
+              {/* --- HERO SECTION --- */}
+              <section className="h-screen flex flex-col justify-center items-center relative px-10">
+                {/* Background Molecule Animation */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+                  {[...Array(6)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      animate={{ 
+                        y: [0, -20, 0],
+                        rotate: [0, 360],
+                        scale: [1, 1.1, 1]
+                      }}
+                      transition={{ duration: 10 + i, repeat: Infinity, ease: "linear" }}
+                      className="absolute text-blue-100"
+                      style={{ 
+                        top: `${20 + (i * 15)}%`, 
+                        left: `${10 + (i * 15)}%` 
+                      }}
+                    >
+                      <Pill size={100 + (i * 20)} />
+                    </motion.div>
+                  ))}
+                </div>
 
-                {/* Decorative background numbers */}
-                <div className="absolute bottom-10 left-10 text-[10vw] font-black opacity-[0.03] select-none">001</div>
+                <motion.div style={{ y: y1, opacity }} className="text-center z-10">
+                  <motion.span 
+                    initial={{ opacity: 0 }} 
+                    animate={{ opacity: 1 }} 
+                    className="text-[10px] font-black tracking-[0.5em] text-blue-600 uppercase mb-4 block"
+                  >
+                    Clinical Excellence
+                  </motion.span>
+                  <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tighter uppercase mb-6">
+                    PURE<br/><span className="text-slate-400 font-light italic">SCIENCE.</span>
+                  </h1>
+                  <p className="max-w-md mx-auto text-slate-500 font-medium text-sm leading-relaxed">
+                    Advancing global healthcare through precision-engineered pharmaceutical distribution.
+                  </p>
+                  
+                  <div className="mt-12 flex items-center justify-center gap-4">
+                    <div className="h-[1px] w-12 bg-slate-200"></div>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">Scroll to Explore</span>
+                    <div className="h-[1px] w-12 bg-slate-200"></div>
+                  </div>
+                </motion.div>
               </section>
 
-              {/* --- 3. THE CATALOG (3D Cards) --- */}
-              <section className="py-40 px-10 bg-[#0F172A] rounded-t-[5vw] text-white">
+              {/* --- CATALOG --- */}
+              <section className="py-32 px-6 md:px-10 bg-[#0F172A] rounded-t-[3rem] text-white relative z-20">
                 <div className="max-w-7xl mx-auto">
-                  <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
-                    <h2 className="text-7xl font-black tracking-tighter">THE<br/>VAULT.</h2>
+                  <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div>
+                      <h2 className="text-5xl md:text-6xl font-black tracking-tighter uppercase mb-2">Vault.</h2>
+                      <p className="text-white/40 text-xs font-bold uppercase tracking-widest">Inventory Index 2026</p>
+                    </div>
                     <div className="relative w-full max-w-sm">
+                       <Search className="absolute left-0 top-4 text-white/20" size={18} />
                        <input 
                         type="text" 
-                        placeholder="Search formulations..."
-                        className="w-full bg-transparent border-b-2 border-white/20 py-4 outline-none focus:border-blue-500 transition-all text-xl"
+                        placeholder="Search Salts..."
+                        className="w-full bg-transparent border-b border-white/10 py-4 pl-8 outline-none focus:border-blue-500 transition-all text-lg"
                         onChange={(e) => setSearchTerm(e.target.value)}
                        />
                     </div>
                   </div>
 
-                  {/* Categories Strip */}
-                  <div className="flex gap-4 mb-20 overflow-x-auto no-scrollbar pb-4">
+                  {/* Categories */}
+                  <div className="flex gap-4 mb-20 overflow-x-auto no-scrollbar">
                     {categories.map(cat => (
                       <button 
                         key={cat.id}
                         onClick={() => setActiveCategory(cat.id)}
-                        className={`px-10 py-4 rounded-full border font-bold text-xs uppercase tracking-widest transition-all ${activeCategory === cat.id ? 'bg-white text-slate-900' : 'border-white/20 hover:border-white'}`}
+                        className={`px-8 py-3 rounded-xl border text-[9px] font-black uppercase tracking-[0.2em] transition-all whitespace-nowrap ${activeCategory === cat.id ? 'bg-blue-600 border-blue-600 text-white' : 'border-white/10 text-white/40 hover:text-white hover:border-white'}`}
                       >
                         {cat.label}
                       </button>
                     ))}
                   </div>
 
-                  {/* Product Grid with Perspective */}
-                  <motion.div layout className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                  {/* Products */}
+                  <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <AnimatePresence>
-                      {filteredProducts.map((p, idx) => (
+                      {filteredProducts.map((p) => (
                         <motion.div 
                           key={p._id}
                           layout
-                          initial={{ opacity: 0, y: 50 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          whileHover={{ rotateX: 5, rotateY: -5, z: 50 }}
-                          className="group relative bg-white/5 border border-white/10 rounded-[2rem] p-8 hover:bg-white/10 transition-all duration-700 cursor-none"
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          whileHover={{ y: -10 }}
+                          className="bg-white/5 border border-white/5 rounded-[2.5rem] p-8 hover:bg-white/10 transition-all"
                         >
-                          <div className="aspect-square overflow-hidden rounded-2xl mb-8">
-                            <img src={p.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="" />
+                          <div className="aspect-[3/4] overflow-hidden rounded-2xl mb-8 bg-slate-800">
+                            <img src={p.image} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700" alt={p.name} />
                           </div>
-                          <h3 className="text-3xl font-black mb-2">{p.name}</h3>
-                          <p className="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">{p.category}</p>
+                          <h3 className="text-2xl font-black uppercase mb-1">{p.name}</h3>
+                          <p className="text-blue-500 text-[9px] font-black uppercase tracking-widest mb-6">{p.category}</p>
+                          <div className="h-[1px] w-full bg-white/10 mb-6"></div>
+                          <p className="text-white/40 text-[10px] font-medium leading-relaxed mb-8 h-10 overflow-hidden italic">
+                            {p.composition}
+                          </p>
                           <button 
                             onClick={() => setSelectedProduct(p)}
-                            className="w-full py-5 border border-white/20 rounded-xl font-black uppercase text-[10px] tracking-[0.3em] group-hover:bg-blue-600 group-hover:border-blue-600 transition-all"
+                            className="w-full py-4 bg-white text-slate-900 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:text-white transition-all"
                           >
-                            Request Access
+                            Inquire Now
                           </button>
                         </motion.div>
                       ))}
@@ -191,24 +235,18 @@ const fetchProducts = async () => {
           <Route path="/admin" element={isAdmin ? <AdminDashboard /> : <Navigate to="/login" />} />
         </Routes>
 
-        {/* --- 4. THE FOOTER (Dark Corporate) --- */}
-        <footer className="bg-white py-40 px-10">
-          <div className="max-w-7xl mx-auto flex flex-col items-center">
-            <h2 className="text-[12vw] font-black tracking-tighter text-slate-900 leading-none mb-20">NEXUS.</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-20 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">
-              <div className="space-y-4">
-                <p className="text-slate-900">Office</p>
-                <p>Industrial Phase VII,<br/>Punjab, India</p>
-              </div>
-              <div className="space-y-4">
-                <p className="text-slate-900">Digital</p>
-                <p>Instagram / LinkedIn / X</p>
-              </div>
-              <div className="space-y-4 text-right">
-                <p className="text-slate-900">Contact</p>
-                <p>Hello@nexuspharma.com</p>
-              </div>
-            </div>
+        <footer className="bg-white py-24 px-10 border-t border-slate-50">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+             <div className="text-center md:text-left">
+                <h2 className="text-3xl font-black tracking-tighter uppercase mb-2">Nexus.</h2>
+                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Global Pharma Network</p>
+             </div>
+             <div className="flex gap-10 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                <Link to="/" className="hover:text-blue-600 transition-colors">Vault</Link>
+                <Link to="/contact" className="hover:text-blue-600 transition-colors">Inquiry</Link>
+                <Link to="/login" className="hover:text-blue-600 transition-colors">Privacy</Link>
+             </div>
+             <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest">© 2026 Nexus Pharma</p>
           </div>
         </footer>
 
