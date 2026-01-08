@@ -1,13 +1,230 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>client</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Toaster } from 'react-hot-toast';
+import axios from 'axios';
+import { 
+  Pill, Search, LogOut, LayoutDashboard, 
+  MapPin, Star, ArrowUpRight, Menu, Globe 
+} from 'lucide-react';
+
+import AdminDashboard from './pages/AdminDashboard';
+import Login from './pages/Login';
+import Contact from './pages/Contact';
+import PriceModal from './components/PriceModal';
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [pathname]);
+  return null;
+};
+
+const App = () => {
+  const [products, setProducts] = useState([]); 
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const categories = [
+    { id: 'All', label: 'Vault', icon: '💎' },
+    { id: 'Oncology', label: 'Oncology', icon: '🎗️' },
+    { id: 'Cardiology', label: 'Cardiology', icon: '❤️' },
+    { id: 'Antibiotics', label: 'Antibiotics', icon: '🦠' },
+    { id: 'Nephrology', label: 'Nephrology', icon: '🧪' },
+    { id: 'Gastroenterology', label: 'Gastro', icon: '🍏' },
+  ];
+
+  useEffect(() => {
+    const handleMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
+    window.addEventListener('mousemove', handleMove);
+    
+    const adminStatus = localStorage.getItem('isAdmin') === 'true';
+    setIsAdmin(adminStatus);
+    fetchProducts();
+    
+    return () => window.removeEventListener('mousemove', handleMove);
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const { data } = await axios.get(`${API_URL}/api/products`);
+      // FIX: Ensure products is always an array
+      const validatedData = Array.isArray(data) ? data : (data.products || []);
+      setProducts(validatedData);
+    } catch (err) { 
+      console.error("Fetch failed", err);
+      setProducts([]); 
+    }
+  };
+
+  const changeLanguage = (langCode) => {
+    const selectField = document.querySelector('.goog-te-combo');
+    if (selectField) {
+      selectField.value = langCode;
+      selectField.dispatchEvent(new Event('change'));
+    }
+  };
+
+  const filteredProducts = products.filter(p => {
+    const matchesCategory = activeCategory === 'All' || p.category === activeCategory;
+    const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <Toaster position="bottom-right" />
+      
+      <motion.div 
+        className="fixed top-0 left-0 w-8 h-8 border border-blue-600 rounded-full pointer-events-none z-[9999] hidden md:block"
+        animate={{ x: mousePos.x - 16, y: mousePos.y - 16 }}
+        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+      />
+
+      <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+        
+        <nav className="fixed top-0 w-full z-[100] px-10 py-8 flex justify-between items-center mix-blend-difference text-white">
+          <Link to="/" className="text-2xl font-black tracking-tighter uppercase">Nexus.</Link>
+          
+          <div className="flex gap-8 items-center font-bold text-[10px] uppercase tracking-[0.2em]">
+            {/* Language Dropdown */}
+            <div id="google_translate_element" className="hidden"></div>
+            <div className="relative group cursor-pointer flex items-center gap-2">
+              <Globe size={14} />
+              <span>Translate</span>
+              <div className="absolute right-0 top-full mt-4 bg-white text-slate-900 p-6 rounded-[2rem] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-slate-100 w-40">
+                <div className="flex flex-col gap-3">
+                  <button onClick={() => changeLanguage('en')} className="text-left hover:text-blue-600">English</button>
+                  <button onClick={() => changeLanguage('es')} className="text-left hover:text-blue-600">Español</button>
+                  <button onClick={() => changeLanguage('fr')} className="text-left hover:text-blue-600">Français</button>
+                  <button onClick={() => changeLanguage('ar')} className="text-left hover:text-blue-600">العربية</button>
+                </div>
+              </div>
+            </div>
+
+            <Link to="/contact" className="hover:opacity-50 transition-all">Inquiry</Link>
+            
+            {isAdmin ? (
+              <div className="flex gap-4">
+                <Link to="/admin" className="hover:opacity-50">Dashboard</Link>
+                <button onClick={() => { localStorage.clear(); window.location.reload(); }} className="hover:text-red-500">Exit</button>
+              </div>
+            ) : (
+              <Link to="/login" className="hover:opacity-50">Portal</Link>
+            )}
+            <Menu size={20} className="cursor-pointer" />
+          </div>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <section className="h-screen flex flex-col justify-center items-center relative overflow-hidden px-10">
+                <motion.div 
+                  initial={{ opacity: 0, y: 80 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-center z-10"
+                >
+                  <h1 className="text-[14vw] font-black leading-[0.8] tracking-tighter uppercase mb-6">
+                    Global<br/><span className="text-blue-600 italic">Access.</span>
+                  </h1>
+                  <p className="max-w-md mx-auto text-slate-500 font-medium text-lg uppercase tracking-widest text-[10px]">
+                    Certified Pharmaceutical Logistics & Export
+                  </p>
+                </motion.div>
+                <div className="absolute bottom-10 left-10 text-[10vw] font-black opacity-[0.03] select-none">2026</div>
+              </section>
+
+              <section className="py-40 px-6 md:px-10 bg-[#0F172A] rounded-t-[4rem] md:rounded-t-[8vw] text-white">
+                <div className="max-w-7xl mx-auto">
+                  <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
+                    <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase">Product<br/>Catalog.</h2>
+                    <div className="relative w-full max-w-sm">
+                       <input 
+                        type="text" 
+                        placeholder="Filter by name..."
+                        className="w-full bg-transparent border-b-2 border-white/10 py-4 outline-none focus:border-blue-500 transition-all text-xl"
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                       />
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 mb-20 overflow-x-auto no-scrollbar pb-4">
+                    {categories.map(cat => (
+                      <button 
+                        key={cat.id}
+                        onClick={() => setActiveCategory(cat.id)}
+                        className={`px-8 py-3 rounded-full border font-bold text-[10px] uppercase tracking-widest transition-all whitespace-nowrap ${activeCategory === cat.id ? 'bg-white text-slate-900 border-white' : 'border-white/10 hover:border-white'}`}
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
+                  <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <AnimatePresence>
+                      {filteredProducts.map((p) => (
+                        <motion.div 
+                          key={p._id}
+                          layout
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          whileHover={{ y: -10 }}
+                          className="group bg-white/5 border border-white/5 rounded-[2.5rem] p-8 transition-all hover:bg-white/10"
+                        >
+                          <div className="aspect-[4/5] overflow-hidden rounded-3xl mb-8">
+                            <img src={p.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt={p.name} />
+                          </div>
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-3xl font-black leading-none uppercase">{p.name}</h3>
+                            <ArrowUpRight className="text-blue-500" />
+                          </div>
+                          <p className="text-white/30 text-[10px] font-black uppercase tracking-[0.2em] mb-8">{p.composition}</p>
+                          <button 
+                            onClick={() => setSelectedProduct(p)}
+                            className="w-full py-5 bg-white text-slate-900 rounded-2xl font-black uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:text-white transition-all"
+                          >
+                            Inquire Price
+                          </button>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+                  </motion.div>
+                </div>
+              </section>
+            </main>
+          } />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={isAdmin ? <AdminDashboard /> : <Navigate to="/login" />} />
+        </Routes>
+
+        {/* FOOTER */}
+        <footer className="bg-white py-40 px-10 border-t border-slate-100">
+          <div className="max-w-7xl mx-auto text-center">
+             <h2 className="text-[12vw] font-black tracking-tighter text-slate-900 leading-none mb-10">NEXUS.</h2>
+             <div className="flex flex-col md:flex-row justify-between items-center gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">
+                <p>© 2026 NEXUS PHARMA PVT LTD</p>
+                <div className="flex gap-10">
+                  <a href="#">LinkedIn</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Email</a>
+                </div>
+                <p>MOHALI / CHANDIGARH / INDIA</p>
+             </div>
+          </div>
+        </footer>
+
+        {selectedProduct && <PriceModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
+      </div>
+    </Router>
+  );
+};
+
+export default App;
