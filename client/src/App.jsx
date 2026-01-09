@@ -1,20 +1,7 @@
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Footer from "./components/Footer";
+import AppRoutes from "./routes/AppRoutes";
 
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Navbar />
-
-      {/* MAIN CONTENT */}
-      <main className="flex-1">
-        <Home />
-      </main>
-
-      <Footer />
-    </div>
-  );
-}
+const App = () => {
+  return <AppRoutes />;
+};
 
 export default App;
