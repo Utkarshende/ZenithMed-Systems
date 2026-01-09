@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CategoryBar from "../components/CategoryBar";
 import ProductCard from "../components/ProductCard";
 import Hero from "../components/Hero";
-import { useCart } from "../components/CartContext";
+import { useCart } from "../context/CartContext";
 
 const Home = () => {
   const [products, setProducts] = useState([]);

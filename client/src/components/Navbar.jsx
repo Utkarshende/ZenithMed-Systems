@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 import { useState } from "react";
-import { useCart } from "../components//CartContext";
+import { useCart } from "../context/CartContext";
 import CartDrawer from "./CartDrawer";
 
 const Navbar = () => {

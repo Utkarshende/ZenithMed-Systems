@@ -1,17 +1,22 @@
-import Navbar from "./components/Navbar";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import CartDrawer from "./components/CartDrawer";
+import { CartProvider } from "./context/CartContext";
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-[#f3f7fb] text-slate-900">
-      <Navbar />
-      <main className="pt-24">
-        <Home />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <CartProvider>
+        <Navbar />
+        <CartDrawer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </CartProvider>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
