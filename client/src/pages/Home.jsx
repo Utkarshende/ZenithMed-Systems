@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CategoryBar from "../components/CategoryBar";
 import ProductCard from "../components/ProductCard";
 
 const Home = () => {
@@ -12,15 +13,21 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8">
-      <h1 className="text-2xl font-bold mb-6">Available Medicines</h1>
+    <>
+      <CategoryBar />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {products.map(product => (
-          <ProductCard key={product._id} product={product} />
-        ))}
-      </div>
-    </div>
+      <section className="max-w-7xl mx-auto px-6 py-8">
+        <h2 className="text-xl font-bold mb-6">
+          Order Medicines Online
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {products.map(product => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 
