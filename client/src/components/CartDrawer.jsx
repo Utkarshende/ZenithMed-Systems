@@ -1,62 +1,39 @@
 import "./CartDrawer.css";
-import { X, Plus, Minus, Trash2 } from "lucide-react";
-import { useCart } from "../context/CartContext";
 
-const CartDrawer = () => {
-  const {
-    cartItems = [],
-    isCartOpen,
-    closeCart,
-    increaseQty,
-    decreaseQty,
-    removeFromCart,
-  } = useCart();
-
-  if (!isCartOpen) return null;
-
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.qty,
-    0
-  );
+const CartDrawer = ({ cart, onClose, onRemove, onUpdateQty }) => {
+  const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   return (
-    <>
-      {/* Overlay */}
-      <div className="cart-overlay" onClick={closeCart}></div>
-
-      {/* Drawer */}
-      <aside className="cart-drawer">
+    <div className="cart-drawer-backdrop" onClick={onClose}>
+      <div
+        className="cart-drawer"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="cart-header">
-          <h2>Your Cart ({cartItems.length})</h2>
-          <button onClick={closeCart}>
-            <X />
+          <h3>Basket ({cart.length})</h3>
+          <button className="close-btn" onClick={onClose}>
+            ✖
           </button>
         </div>
 
         <div className="cart-items">
-          {cartItems.length === 0 ? (
-            <p className="empty-cart">Your cart is empty</p>
+          {cart.length === 0 ? (
+            <p className="empty-msg">Your basket is empty</p>
           ) : (
-            cartItems.map((item) => (
-              <div className="cart-item" key={item._id}>
+            cart.map((item) => (
+              <div key={item._id} className="cart-item">
                 <div className="item-info">
-                  <h4>{item.name}</h4>
-                  <p>₹{item.price}</p>
+                  <span className="item-name">{item.name}</span>
+                  <div className="qty-controls">
+                    <button onClick={() => onUpdateQty(item._id, -1)}>-</button>
+                    <span>{item.qty}</span>
+                    <button onClick={() => onUpdateQty(item._id, 1)}>+</button>
+                  </div>
                 </div>
-
-                <div className="item-actions">
-                  <button onClick={() => decreaseQty(item._id)}>
-                    <Minus size={14} />
-                  </button>
-                  <span>{item.qty}</span>
-                  <button onClick={() => increaseQty(item._id)}>
-                    <Plus size={14} />
-                  </button>
-                  <button
-                    className="delete"
-                    onClick={() => removeFromCart(item._id)}
-                  >
-                    <Trash2 size={14} />
+                <div className="item-price">
+                  ₹{item.price * item.qty}
+                  <button className="remove-btn" onClick={() => onRemove(item._id)}>
+                    🗑
                   </button>
                 </div>
               </div>
@@ -66,13 +43,13 @@ const CartDrawer = () => {
 
         <div className="cart-footer">
           <div className="total">
-            <span>Total</span>
-            <strong>₹{total}</strong>
+            <span>Total:</span>
+            <span>₹{total}</span>
           </div>
-          <button className="checkout-btn">Proceed to Checkout</button>
+          <button className="checkout-btn">Proceed to Payment</button>
         </div>
-      </aside>
-    </>
+      </div>
+    </div>
   );
 };
 
