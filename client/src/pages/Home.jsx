@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CategoryBar from "../components/CategoryBar";
 import ProductCard from "../components/ProductCard";
 import Hero from "../components/Hero";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../components/CartContext";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -30,7 +30,7 @@ const Home = () => {
             <ProductCard
               key={product._id}
               product={product}
-              onAdd={addToCart}   {/* ✅ FIX */}
+              onAdd={addToCart}  
             />
           ))}
         </div>
