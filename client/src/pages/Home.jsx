@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import CategoryBar from "../components/CategoryBar";
 import ProductCard from "../components/ProductCard";
 import Hero from "../components/Hero";
+import { useCart } from "../context/CartContext";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/products")
@@ -25,7 +27,11 @@ const Home = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {products.map(product => (
-            <ProductCard key={product._id} product={product} />
+            <ProductCard
+              key={product._id}
+              product={product}
+              onAdd={addToCart}   {/* ✅ FIX */}
+            />
           ))}
         </div>
       </section>
