@@ -60,7 +60,7 @@ const handleRemove = (id) => {
 };
 {isCartOpen && (
   <CartDrawer
-    cart={cart}
+    cart={cart || []}
     onClose={() => setIsCartOpen(false)}
     onRemove={handleRemove}
     onUpdateQty={handleUpdateQty}
