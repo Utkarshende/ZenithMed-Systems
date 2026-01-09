@@ -1,0 +1,43 @@
+.category-strip {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.category-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.category-item {
+  min-width: 110px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.category-item:hover {
+  border-color: #10847e;
+  color: #10847e;
+}
+
+.category-item.active {
+  background: #10847e;
+  color: white;
+  border-color: #10847e;
+}
+
+.icon {
+  font-size: 20px;
+}
