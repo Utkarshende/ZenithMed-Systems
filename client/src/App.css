@@ -1,15 +1,5 @@
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 16px;
-}
-
-.section {
-  padding: 40px 0;
-}
-
-.section-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f7;
 }

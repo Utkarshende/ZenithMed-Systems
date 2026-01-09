@@ -1,74 +1,8 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.navbar-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-/* Logo */
-.navbar-logo {
-  font-size: 22px;
-  font-weight: 900;
-  color: #10847e;
-  cursor: pointer;
-}
-
-.navbar-logo span {
-  color: #1f2937;
-  margin-left: 2px;
-}
-
-/* Search */
-.navbar-search {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #f3f4f6;
-  padding: 10px 14px;
-  border-radius: 12px;
-}
-
-.navbar-search input {
-  border: none;
-  background: transparent;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
-}
-
-/* Cart */
-.navbar-cart {
-  position: relative;
   background: #10847e;
   color: white;
-  padding: 10px 14px;
-  border-radius: 12px;
-  cursor: pointer;
+  padding: 15px 30px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-/* Cart Badge */
-.cart-badge {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  background: #ef4444;
-  color: white;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 999px;
-  border: 2px solid white;
 }

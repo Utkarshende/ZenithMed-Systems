@@ -1,123 +1,21 @@
-.cart-drawer-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: flex-end;
-  z-index: 200;
-}
-
 .cart-drawer {
-  width: 350px;
-  max-width: 90%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
   height: 100%;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
-  animation: slideIn 0.3s forwards;
-}
-
-@keyframes slideIn {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.cart-items {
-  flex: 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  background: white;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: #f9fafb;
-  padding: 10px;
-  border-radius: 10px;
+  margin: 10px 0;
 }
 
-.item-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.item-name {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.qty-controls {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.qty-controls button {
-  width: 24px;
-  height: 24px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: white;
-  cursor: pointer;
-}
-
-.item-price {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-weight: bold;
-}
-
-.remove-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-top: 4px;
-}
-
-.cart-footer {
-  border-top: 1px solid #e5e7eb;
-  padding-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.checkout-btn {
-  background: #10847e;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
+.close {
+  margin-top: 20px;
+  width: 100%;
 }

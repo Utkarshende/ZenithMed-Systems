@@ -1,50 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import ProductCard from '../components/ProductCard';
-import toast from 'react-hot-toast';
+import ProductGrid from "../components/ProductGrid";
+import "./Home.css";
 
-const API_URL = 'http://localhost:5000/api/products';
+const medicines = [
+  {
+    id: 1,
+    name: "Paracetamol 500mg",
+    price: 35,
+    image: "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/v1644254097/avp6kkpwrm3h9emazmwl.jpg"
+  },
+  {
+    id: 2,
+    name: "Azithromycin 250mg",
+    price: 120,
+    image: "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/v1644228391/olq0tq8ah4o6rf6zqkks.jpg"
+  },
+  {
+    id: 3,
+    name: "Vitamin C Tablets",
+    price: 80,
+    image: "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/v1644235798/bjv4nmzq2kt6op3n2ksm.jpg"
+  }
+];
 
-const Home = ({ onAddToCart, searchQuery }) => {
-  const [medicines, setMedicines] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const fetchMedicines = async () => {
-      setLoading(true);
-      try {
-        const res = await fetch(`${API_URL}?query=${searchQuery || ''}`);
-        const data = await res.json();
-        setMedicines(Array.isArray(data) ? data : []);
-      } catch (err) {
-        console.error("Failed to fetch medicines:", err);
-        toast.error("Failed to fetch medicines from server");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    // Debounce search
-    const timeoutId = setTimeout(fetchMedicines, 300);
-    return () => clearTimeout(timeoutId);
-  }, [searchQuery]);
-
+const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      {loading ? (
-        <div className="text-center py-20 font-bold text-blue-600">
-          Loading medicines...
-        </div>
-      ) : medicines.length === 0 ? (
-        <div className="text-center py-20 text-gray-500 font-bold">
-          No medicines found
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {medicines.map((med) => (
-            <ProductCard key={med._id} med={med} onAddToCart={onAddToCart} />
-          ))}
-        </div>
-      )}
+    <div className="home">
+      <h2>Available Medicines</h2>
+      <ProductGrid products={medicines} />
     </div>
   );
 };
