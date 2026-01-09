@@ -1,5 +1,7 @@
 import ProductGrid from "../components/ProductGrid";
 import "./Home.css";
+import { useState, useEffect } from "react";
+import { getMedicines } from "../services/api";
 
 const medicines = [
   {
@@ -23,6 +25,28 @@ const medicines = [
 ];
 
 const Home = () => {
+  const [medicines, setMedicines] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchMedicines = async () => {
+      try {
+        const res = await getMedicines();
+        setMedicines(res.data || []);
+      } catch (err) {
+        setError("Failed to load medicines");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMedicines();
+  }, []);
+
+  if (loading) return <p style={{ padding: 40 }}>Loading medicines...</p>;
+  if (error) return <p style={{ padding: 40 }}>{error}</p>;
+
   return (
     <div className="home">
       <h2>Available Medicines</h2>
@@ -32,3 +56,4 @@ const Home = () => {
 };
 
 export default Home;
+
