@@ -1,23 +1,21 @@
 import "./Navbar.css";
+import { ShoppingCart, Search } from "lucide-react";
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const cart = useCart();
-
-  // ✅ SAFE FALLBACK
-  const cartItems = cart?.cartItems || [];
-  const toggleCart = cart?.toggleCart;
+  const { cartItems = [], toggleCart } = useCart();
 
   return (
     <header className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <div className="logo">
-          <span>Nexus</span>Pharma
+        <div className="navbar-logo">
+          Nexus<span>Pharma</span>
         </div>
 
         {/* Search */}
-        <div className="search-box">
+        <div className="navbar-search">
+          <Search size={18} />
           <input
             type="text"
             placeholder="Search medicines & health products"
@@ -25,10 +23,10 @@ const Navbar = () => {
         </div>
 
         {/* Cart */}
-        <div className="cart" onClick={toggleCart}>
-          🛒
+        <div className="navbar-cart" onClick={toggleCart}>
+          <ShoppingCart size={22} />
           {cartItems.length > 0 && (
-            <span className="cart-count">{cartItems.length}</span>
+            <span className="cart-badge">{cartItems.length}</span>
           )}
         </div>
       </div>
