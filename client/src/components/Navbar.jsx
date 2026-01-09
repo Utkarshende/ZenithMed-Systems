@@ -2,7 +2,11 @@ import "./Navbar.css";
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const { cartItems, toggleCart } = useCart();
+  const cart = useCart();
+
+  // ✅ SAFE FALLBACK
+  const cartItems = cart?.cartItems || [];
+  const toggleCart = cart?.toggleCart;
 
   return (
     <header className="navbar">
