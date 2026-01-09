@@ -1,40 +1,45 @@
-import { useEffect, useState } from "react";
-import Hero from "../components/Hero";
-import CategoryBar from "../components/CategoryBar";
-import ProductCard from "../components/ProductCard";
-import { useCart } from "../context/CartContext";
 import "./Home.css";
+import { useEffect, useState } from "react";
+import ProductCard from "../components/ProductCard";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const { addToCart } = useCart();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
-      .then(res => res.json())
-      .then(data => setProducts(data.products || []))
-      .catch(() => setProducts([]));
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/products");
+        const data = await res.json();
+        setProducts(data.products || []);
+      } catch (err) {
+        console.error("Failed to fetch products");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
   }, []);
 
+  const handleAdd = (product) => {
+    console.log("Added to cart:", product.name);
+  };
+
+  if (loading) {
+    return <div className="loading">Loading medicines...</div>;
+  }
+
   return (
-    <>
-      <Hero />
-      <CategoryBar />
+    <section className="home">
+      <h2>Popular Medicines</h2>
 
-      <div className="container section">
-        <h2 className="section-title">Popular Medicines</h2>
-
-        <div className="product-grid">
-          {products.map(product => (
-            <ProductCard
-              key={product._id}
-              product={product}
-              onAdd={addToCart}
-            />
-          ))}
-        </div>
+      <div className="product-grid">
+        {products.map((p) => (
+          <ProductCard key={p._id} product={p} onAdd={handleAdd} />
+        ))}
       </div>
-    </>
+    </section>
   );
 };
 
