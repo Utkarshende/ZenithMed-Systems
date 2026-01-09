@@ -2,14 +2,19 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-[#f6f7fb]">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
-      <Home />
+
+      {/* MAIN CONTENT */}
+      <main className="flex-1">
+        <Home />
+      </main>
+
       <Footer />
     </div>
   );
-};
+}
 
 export default App;
