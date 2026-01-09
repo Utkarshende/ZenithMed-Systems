@@ -3,36 +3,53 @@ import { createContext, useContext, useState } from "react";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => setIsCartOpen((p) => !p);
+  const closeCart = () => setIsCartOpen(false);
 
   const addToCart = (product) => {
-    setCart(prev => {
-      const found = prev.find(p => p._id === product._id);
-      if (found) {
-        return prev.map(p =>
+    setCartItems((prev) => {
+      const found = prev.find((p) => p._id === product._id);
+      if (found)
+        return prev.map((p) =>
           p._id === product._id ? { ...p, qty: p.qty + 1 } : p
         );
-      }
       return [...prev, { ...product, qty: 1 }];
     });
   };
 
-  const removeFromCart = (id) => {
-    setCart(prev => prev.filter(item => item._id !== id));
-  };
-
-  const updateQty = (id, delta) => {
-    setCart(prev =>
-      prev.map(item =>
-        item._id === id
-          ? { ...item, qty: Math.max(1, item.qty + delta) }
-          : item
+  const increaseQty = (id) =>
+    setCartItems((prev) =>
+      prev.map((p) =>
+        p._id === id ? { ...p, qty: p.qty + 1 } : p
       )
     );
-  };
+
+  const decreaseQty = (id) =>
+    setCartItems((prev) =>
+      prev.map((p) =>
+        p._id === id && p.qty > 1 ? { ...p, qty: p.qty - 1 } : p
+      )
+    );
+
+  const removeFromCart = (id) =>
+    setCartItems((prev) => prev.filter((p) => p._id !== id));
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQty }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        increaseQty,
+        decreaseQty,
+        toggleCart,
+        closeCart,
+        isCartOpen,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
